@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
@@ -32,13 +31,13 @@ function WelcomeTemplate() {
             </TextWrap2>
             </Container2>
             <Container3>
-            <H3><img src="pop,logo.jpg" />spatch</H3>
+            <H3><img src="pop,logo.jpg" alt="icon"/>spatch</H3>
             <Wrap>
             <span>Contact</span><IconWrap><TwitterIcon/><InstagramIcon/><LinkedInIcon/></IconWrap>
             </Wrap>
             4001A Plot C, Banana Island Road, Ikoyi, Lagos.<br /> (c) 2020 Spatch Logistic LLC
             <FtWrap>
-            <footer>Any concern? <a>Report to Support Team </a><ArrowForwardIcon/></footer>
+            <footer>Any concern? <button>Report to Support Team </button><ArrowForwardIcon/></footer>
             </FtWrap>
             </Container3>
             </Content>
@@ -224,7 +223,7 @@ justify-content: space-between;
 padding-top: 20px;
 }
 
-a {
+button {
    font-weight: bold;
 }
 
@@ -246,9 +245,7 @@ const IconWrap = styled.div`
 
 
 `
-const FtIcon = styled.div`
 
-`
 const FtWrap = styled.div`
 padding-bottom: 15px;
 
@@ -260,16 +257,6 @@ font-size: 35px;
 padding-bottom: 10px;
 border-bottom: 1px solid #f2f2f2;
 
-`
-const EmailIconWrap = styled.div`
-display: flex;
-padding-left: 30px;
-padding-right: 30px;
-span {
-    color: #7000f6;
-    padding-left: 10px;
-    font-weight: bold;
-}
 `
 
 

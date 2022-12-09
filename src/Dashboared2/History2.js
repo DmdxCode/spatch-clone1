@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import CircleIcon from '@mui/icons-material/Circle';
 import WalletIcon from '@mui/icons-material/Wallet';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
-import AddIcon from '@mui/icons-material/Add';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
 import LogoutIcon from '@mui/icons-material/Logout';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
@@ -35,7 +33,7 @@ function History2() {
                 <CustomClose onClick={() => setburgerStatus(false)}/>
                 <ul key={burgerStatus.id}></ul>
                 <ProfileImg>
-                  <img src="Profilepic.jpeg" alt="profile picture"/>
+                  <img src="Profilepic.jpeg" alt="profile"/>
                 </ProfileImg>
                 <Text1>Elijah Solomon</Text1>
                 <Text2>View Profile</Text2>
@@ -55,21 +53,21 @@ function History2() {
                <Container3>
                 <List1>
                   
-                <li><a href="#" id="1"><ArrowOutwardIcon/>  Request </a></li>
+                <li><button><ArrowOutwardIcon/>  Request </button></li>
                
-                  <li><a><WalletIcon/> Wallet</a></li>
+                  <li><button><WalletIcon/> Wallet</button></li>
                 
                 <HistoryFlexWrap>
-                <li><span><Inventory2Icon/></span> <a>History</a></li><WalletWrap><span>.</span></WalletWrap> 
+                <li><span><Inventory2Icon/></span> <button>History</button></li><WalletWrap><span>.</span></WalletWrap> 
                 </HistoryFlexWrap>
-                <li><a href="#" id="4"><AccountCircleTwoToneIcon /> Account</a></li>
+                <li><button><AccountCircleTwoToneIcon /> Account</button></li>
                 </List1>
 
                 <List2>
-                <li><a href="#" id="3"><LogoutIcon />  Logout</a></li>
-                <li><a href="#" id="3"><SupportAgentIcon/>  Contact</a></li>
+                <li><button><LogoutIcon />  Logout</button></li>
+                <li><button><SupportAgentIcon/>  Contact</button></li>
                 </List2>
-                <footer>spatch<img src="pop,logo.jpg" /></footer>
+                <footer>spatch<img src="pop,logo.jpg" alt="icon"/></footer>
                 
                </Container3>
             </BurgerNav>
@@ -97,18 +95,18 @@ function History2() {
                 <Tag>Same Day</Tag>
                 <Flex>
                 <Grid1>
-                <span><img src="yellow icon (1) up.png" alt="icon"/><a>Picked From</a></span>
+                <span><img src="yellow icon (1) up.png" alt="icon"/><button>Picked From</button></span>
                 <Tr><td>Fisayo Ahmed</td><h8>Yar'Adua Penthous...</h8></Tr>
                 <span><img src="icon (5) down.png" alt="icon"/><b>Delivered To</b></span>
                 <Tr><td>Uche Osifejo</td><h8>Yar'Adua Penthous...</h8></Tr>
                 </Grid1>
-                <CardSpan><img src="Spachbike3.jpg" /></CardSpan>
+                <CardSpan><img src="Spachbike3.jpg" alt="icon"/></CardSpan>
                 </Flex>
 
                 </Table>
              </ContContainer2>
              <ContContainer3>
-             <H3><img src="pop,logo.jpg" /> spatch</H3>
+             <H3><img src="pop,logo.jpg" alt="icon"/> spatch</H3>
             <WrapBtm>
             <span>Contact</span><IconWrap><TwitterIcon/><InstagramIcon/><LinkedInIcon/></IconWrap>
             </WrapBtm>
@@ -122,7 +120,7 @@ function History2() {
             </Content> 
 
         </Container>
-        <BottomAddIcon><img src="add icon img-modified (1).png"/></BottomAddIcon>
+        <BottomAddIcon><img src="add icon img-modified (1).png" alt="icon"/></BottomAddIcon>
     </>
 
   )
@@ -266,10 +264,6 @@ const Button1 = styled.div`
 
 
 `
-const Button2 =styled.div`
-
-
-`
 
 const Container3 = styled.div`
 padding-left: 20px;
@@ -286,7 +280,7 @@ padding-top: 25px;
  
 }
 
-a {
+button {
   text-decoration: none; 
   color: #6E6E6E;
 }
@@ -316,7 +310,7 @@ span{
   text-shadow: 0 0 8px #6001D1, 0 0 8px #6001D1;
 }
 
-a {
+button {
     margin-left: 15px;
 }
 
@@ -330,7 +324,7 @@ li {
    
    border-top: 1px solid #6E6E6E;
    padding-bottom: 15px;
-  a {
+  button {
 
     text-decoration: none; 
     color: #6E6E6E;
@@ -413,7 +407,7 @@ const Table = styled.div`
 span {
     display: flex;
    }
-   a {
+   button {
     color: #FFB947;
     font-size: 15px;
     margin-left: 5px;
@@ -490,7 +484,7 @@ span {
    
    margin-bottom: 10px;
  }
- a {
+ button {
   color: #FFB947;
   font-size: 15px;
   

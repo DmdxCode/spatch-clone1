@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import CircleIcon from '@mui/icons-material/Circle';
 import WalletIcon from '@mui/icons-material/Wallet';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
-import AddIcon from '@mui/icons-material/Add';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
 import LogoutIcon from '@mui/icons-material/Logout';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
@@ -29,7 +27,7 @@ function Dashboard2() {
                 <CustomClose onClick={() => setburgerStatus(false)}/>
                 <ul key={burgerStatus.id}></ul>
                 <ProfileImg>
-                  <img src="Profilepic.jpeg" alt="profile picture"/>
+                  <img src="Profilepic.jpeg" alt="profile"/>
                 </ProfileImg>
                 <Text1>Elijah Solomon</Text1>
                 <Text2>View Profile</Text2>
@@ -49,36 +47,36 @@ function Dashboard2() {
                <Container3>
                 <List1>
                   <RequestWrap>
-                <li><a href="#" id="1"><ArrowOutwardIcon style={{color: '#7000f6'}}/>  Request </a></li><span>.</span></RequestWrap>
-                <li><a href="#" id="3"><WalletIcon />  Wallet</a></li>
-                <li><a href="#" id="3"><Inventory2Icon/> History</a></li>
-                <li><a href="#" id="4"><AccountCircleTwoToneIcon /> Account</a></li>
+                <li><button><ArrowOutwardIcon style={{color: '#7000f6'}}/>  Request </button></li><span>.</span></RequestWrap>
+                <li><button><WalletIcon />  Wallet</button></li>
+                <li><button><Inventory2Icon/> History</button></li>
+                <li><button><AccountCircleTwoToneIcon /> Account</button></li>
                 </List1>
 
                 <List2>
-                <li><a href="#" id="3"><LogoutIcon />  Logout</a></li>
-                <li><a href="#" id="3"><SupportAgentIcon/>  Contact</a></li>
+                <li><button><LogoutIcon />  Logout</button></li>
+                <li><button><SupportAgentIcon/>  Contact</button></li>
                 </List2>
-                <footer>spatch<img src="pop,logo.jpg" /></footer>
+                <footer>spatch<img src="pop,logo.jpg" alt="icon"/></footer>
                 
                </Container3>
             </BurgerNav>
             <Content>
               <BtnTopText>Would you like to request?</BtnTopText>
               <BtnWrap1>
-                <Btn1><Img><img src="pop,logo.jpg"/></Img><span>Same Day</span></Btn1>
-                <Btn2><Img><img src="pop,logo.jpg"/></Img><span>Express</span></Btn2>
+                <Btn1><Img><img src="pop,logo.jpg" alt="icon"/></Img><span>Same Day</span></Btn1>
+                <Btn2><Img><img src="pop,logo.jpg" alt="icon"/></Img><span>Express</span></Btn2>
               </BtnWrap1>
 
               <BtnWrap2>
-                <Btn3><Img><img src="pop,logo.jpg"/></Img><span>Interstate</span></Btn3>
-                <Btn4><Img><img src="pop,logo.jpg"/></Img><span>International</span></Btn4>
+                <Btn3><Img><img src="pop,logo.jpg" alt="icon"/></Img><span>Interstate</span></Btn3>
+                <Btn4><Img><img src="pop,logo.jpg" alt="icon"/></Img><span>International</span></Btn4>
               </BtnWrap2>
               
             </Content> 
 
         </Container>
-        <BottomAddIcon><img src="add icon img-modified (1).png"/></BottomAddIcon>
+        <BottomAddIcon><img src="add icon img-modified (1).png" alt="icon"/></BottomAddIcon>
     </>
 
   )
@@ -233,10 +231,6 @@ const Button1 = styled.div`
 
 
 `
-const Button2 =styled.div`
-
-
-`
 
 const Container3 = styled.div`
 padding-left: 20px;
@@ -253,7 +247,7 @@ padding-top: 15px;
  
 }
 
-a {
+button {
   text-decoration: none; 
   color: #6E6E6E;
 }
@@ -283,7 +277,7 @@ li {
    
    border-top: 1px solid #6E6E6E;
    padding-bottom: 10px;
-  a {
+  button {
 
     text-decoration: none; 
     color: #6E6E6E;

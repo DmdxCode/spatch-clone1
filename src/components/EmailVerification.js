@@ -6,7 +6,7 @@ function EmailVerification() {
   return (
     <>
     <Header>
-      <h1>spatch<img src="pop,logo.jpg" /></h1>
+      <h1>spatch<img src="pop,logo.jpg"  alt="logo"/></h1>
     </Header>
     <Body>
       <Background></Background>

@@ -7,7 +7,7 @@ function Register() {
   return (
     <Body>
     <Header>
-        <h1>spatch<img src="pop,logo.jpg" /></h1>
+        <h1>spatch<img src="pop,logo.jpg"  alt="logo"/></h1>
     </Header>
     <Container>
       <Content>
@@ -18,7 +18,7 @@ function Register() {
               <EmailIconWrap><EmailIcon/></EmailIconWrap> <span> <input placeholder="Email" type="text" id="@" required/></span>
         </LoginInput1>
         <Button>Continue</Button>
-        <footer>By continuing, you agree to our <a href="#">Privacy Policy</a> and our <a href="#">Terms of Service</a></footer>
+        <footer>By continuing, you agree to our <button>Privacy Policy</button> and our <button>Terms of Service</button></footer>
       </Content>
     </Container>
     
@@ -73,7 +73,7 @@ background-color: #f2f2f2;
     color: #6E6E6E;
    }
 
-   a {
+   button {
     font-weight: bold;
     text-decoration: none;
    }

@@ -33,13 +33,13 @@ function ResetPasswordEmail() {
             </TextWrap2>
             </Container2>
             <Container3>
-            <H3><img src="pop,logo.jpg" /> spatch</H3>
+            <H3><img src="pop,logo.jpg" alt="icon"/> spatch</H3>
             <Wrap>
             <span>Contact</span><IconWrap><TwitterIcon/><InstagramIcon/><LinkedInIcon/></IconWrap>
             </Wrap>
             4001A Plot C, Banana Island Road, Ikoyi, Lagos.<br /> (c) 2020 Spatch Logistic LLC
             <FtWrap>
-            <footer>Any concern? <a>Report to Support Team </a><ArrowForwardIcon/></footer>
+            <footer>Any concern? <button>Report to Support Team </button><ArrowForwardIcon/></footer>
             </FtWrap>
             </Container3>
         </Content>
@@ -137,30 +137,7 @@ span {
 }
 
 `
-const Button = styled.div`
-background-color: #7000F6;
-color: white;
-height: 60px;
-align-items: center;
-display: flex;
-justify-content: center;
-border-radius: 10px;
-font-weight: bold;
-margin-top: 10px;
-cursor: pointer;
-  span {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-   
-  }
-`
-const ArrowWrap = styled.div`
-    align-items: center;
-    display: flex;
-    justify-content: center
- 
-`
+
 const TextWrap2 = styled.div`
 
 
@@ -209,7 +186,7 @@ footer {
     padding-top: 20px;
 }
 
-a {
+button {
    font-weight: bold;
    cursor: pointer;
 }
@@ -230,9 +207,7 @@ const IconWrap = styled.div`
 
 
 `
-const FtIcon = styled.div`
 
-`
 const FtWrap = styled.div`
 padding-bottom: 15px;
 

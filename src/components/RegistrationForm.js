@@ -1,14 +1,13 @@
-import React, {useState} from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import WestIcon from '@mui/icons-material/West';
 import PersonIcon from '@mui/icons-material/Person';
 import LockIcon from '@mui/icons-material/Lock';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
-import { getCountryCallingCode } from 'react-phone-number-input'
+
 function RegistrationForm() {
-  const [value, setValue] = useState()
+  
   
   return (
     <>
@@ -34,7 +33,7 @@ function RegistrationForm() {
                   <li><input placeholder='803 600 1234' type="text" name="Last Name"></input></li>
         </NameWrap>
         <Button type="submit">Create account</Button>
-        <footer>By continuing, you agree to our <a href="#">Privacy Policy</a> and our <a href="#">Terms of Service</a></footer>
+        <footer>By continuing, you agree to our <button>Privacy Policy</button> and our <button>Terms of Service</button></footer>
     </Content>
     </Container>
     </>
@@ -76,7 +75,7 @@ footer{
   margin-top: 30px;
  }
 
- a {
+ button {
   font-weight: bold;
   text-decoration: none;
   color: #7000f6;
@@ -184,40 +183,6 @@ justify-content: space-between;
 const VisibilityIconWrap = styled.div`
 color: #6E6E6E;
 `
-const PhoneNumber = styled.div`
-
-display: flex;
-justify-content: space-between;
-margin-top: 10px;
-padding-bottom: ;
-
-
-
-
-`
-const Number = styled.div`
-border-bottom: 2px solid #7000F6;
-
-
-
-input {
-  
-  width: 150px;
-  -webkit-appearance: none;
-  outline: none;
-  decoration: none;
-  border: none;
-  color: #7000F6;
-
-  font-weight: bold;
-  background-color: ;
-  margin-top: 25px;
-  
-  
-}
-
-
-`
 
 const Button = styled.div`
 background-color: #7000F6;
@@ -232,23 +197,6 @@ margin-top: 50px;
 cursor: pointer;
 `
 
-const CountryCode = styled.div`
-padding-top: 20px;
-padding-bottom: 10px;
-input {
-    
-  -webkit-appearance: none;
-  width: 20px;
-  outline: none;
-  decoration: none;
-  border: none;
-  color: #7000F6;
-  font-weight: bold;
-  height: 20px;
-  border-bottom: 2px solid #7000F6;
-  
-}
-`
 const NameWrap = styled.div`
 display: flex;
 justify-content: space-between;

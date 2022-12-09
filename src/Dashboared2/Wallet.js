@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import CircleIcon from '@mui/icons-material/Circle';
 import WalletIcon from '@mui/icons-material/Wallet';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
 import AddIcon from '@mui/icons-material/Add';
@@ -30,7 +29,7 @@ function Wallet() {
                 <CustomClose onClick={() => setburgerStatus(false)}/>
                 <ul key={burgerStatus.id}></ul>
                 <ProfileImg>
-                  <img src="Profilepic.jpeg" alt="profile picture"/>
+                  <img src="Profilepic.jpeg" alt="profile"/>
                 </ProfileImg>
                 <Text1>Elijah Solomon</Text1>
                 <Text2>View Profile</Text2>
@@ -50,19 +49,19 @@ function Wallet() {
                <Container3>
                 <List1>
                   
-                <li><a href="#" id="1"><ArrowOutwardIcon/>  Request </a></li>
+                <li><button id="1"><ArrowOutwardIcon/>  Request </button></li>
                 <WalletFlexWrap>
-                  <li><span><WalletIcon style={{color: "#7000f6", marginTop: "2px"}}/></span><a> Wallet</a></li><WalletWrap><span>.</span></WalletWrap>
+                  <li><span><WalletIcon style={{color: "#7000f6", marginTop: "2px"}}/></span><button> Wallet</button></li><WalletWrap><span>.</span></WalletWrap>
                 </WalletFlexWrap>
-                <li><a href="#" id="3"><Inventory2Icon/> History</a></li>
-                <li><a href="#" id="4"><AccountCircleTwoToneIcon /> Account</a></li>
+                <li><button id="3"><Inventory2Icon/> History</button></li>
+                <li><button id="4"><AccountCircleTwoToneIcon /> Account</button></li>
                 </List1>
 
                 <List2>
-                <li><a href="#" id="3"><LogoutIcon />  Logout</a></li>
-                <li><a href="#" id="3"><SupportAgentIcon/>  Contact</a></li>
+                <li><button id="3"><LogoutIcon />  Logout</button></li>
+                <li><button id="3"><SupportAgentIcon/>  Contact</button></li>
                 </List2>
-                <footer>spatch<img src="pop,logo.jpg" /></footer>
+                <footer>spatch<img src="pop,logo.jpg" alt="icon"/></footer>
                 
                </Container3>
             </BurgerNav>
@@ -78,14 +77,14 @@ function Wallet() {
               </BtnWrap1>
 
               <BtnWrap2>
-                <Btn3><span>Visa <img src="spatch visa.jpg" /></span><footer>**** 4399</footer></Btn3>
-                <Btn4><span><AddIcon fontSize="large"/></span><a>Add new card</a></Btn4>
+                <Btn3><span>Visa <img src="spatch visa.jpg" alt="icon"/></span><footer>**** 4399</footer></Btn3>
+                <Btn4><span><AddIcon fontSize="large"/></span><button>Add new card</button></Btn4>
               </BtnWrap2>
               
             </Content> 
 
         </Container>
-        <BottomAddIcon><img src="add icon img-modified (1).png"/></BottomAddIcon>
+        <BottomAddIcon><img src="add icon img-modified (1).png" alt="icon"/></BottomAddIcon>
     </>
 
   )
@@ -238,7 +237,7 @@ padding-top: 15px;
 
 }
 
-a {
+button {
   text-decoration: none; 
   color: #6E6E6E;
 }
@@ -273,7 +272,7 @@ li {
    
    border-top: 1px solid #6E6E6E;
    padding-bottom: 15px;
-  a {
+   button {
 
     text-decoration: none; 
     color: #6E6E6E;
@@ -437,7 +436,7 @@ span {
   padding-top: 30px;
 }
 
-a {
+button {
   padding-left: 35px;
 }
 `

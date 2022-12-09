@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import CircleIcon from '@mui/icons-material/Circle';
 import WalletIcon from '@mui/icons-material/Wallet';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
-import AddIcon from '@mui/icons-material/Add';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
 import LogoutIcon from '@mui/icons-material/Logout';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
@@ -13,11 +11,9 @@ import CloseIcon from '@mui/icons-material/Close';
 import ErrorOutlineRoundedIcon from '@mui/icons-material/ErrorOutlineRounded';
 import WestIcon from '@mui/icons-material/West';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import GpsNotFixedOutlinedIcon from '@mui/icons-material/GpsNotFixedOutlined';
 import MopedIcon from '@mui/icons-material/Moped';
 import PaymentsIcon from '@mui/icons-material/Payments';
 import SmsIcon from '@mui/icons-material/Sms';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 function RequestAsSender4() {
@@ -37,7 +33,7 @@ function RequestAsSender4() {
                 <CustomClose onClick={() => setburgerStatus(false)}/>
                 <ul key={burgerStatus.id}></ul>
                 <ProfileImg>
-                  <img src="Profilepic.jpeg" alt="profile picture"/>
+                  <img src="Profilepic.jpeg" alt="profile"/>
                 </ProfileImg>
                 <Text1>Elijah Solomon</Text1>
                 <Text2>View Profile</Text2>
@@ -57,15 +53,15 @@ function RequestAsSender4() {
                <Container3>
                 <List1>
                   <RequestWrap>
-                <li><a href="#" id="1"><ArrowOutwardIcon/>  Request </a></li><span>.</span></RequestWrap>
-                <li><a href="#" id="3"><WalletIcon />  Wallet</a></li>
-                <li><a href="#" id="3"><Inventory2Icon/> History</a></li>
-                <li><a href="#" id="4"><AccountCircleTwoToneIcon /> Account</a></li>
+                <li><button><ArrowOutwardIcon/>  Request </button></li><span>.</span></RequestWrap>
+                <li><button><WalletIcon />  Wallet</button></li>
+                <li><button><Inventory2Icon/> History</button></li>
+                <li><button><AccountCircleTwoToneIcon /> Account</button></li>
                 </List1>
 
                 <List2>
-                <li><a href="#" id="3"><LogoutIcon />  Logout</a></li>
-                <li><a href="#" id="3"><SupportAgentIcon/>  Contact</a></li>
+                <li><button><LogoutIcon />  Logout</button></li>
+                <li><button><SupportAgentIcon/>  Contact</button></li>
                 </List2>
                 <footer>spatch<img src="pop,logo.jpg" alt="logo"/></footer>
                 
@@ -76,22 +72,22 @@ function RequestAsSender4() {
            <MasterBox>
             <BoxHead><span>Same Day</span><KeyboardArrowDownIcon fontSize="large" style={{cursor: "pointer"}}/></BoxHead>
             <MinBoxWrap>
-              <MinBox1 style={{cursor: "pointer"}}><img src="icon (1).png" /><span>sender</span></MinBox1>
-              <MinBox2 style={{cursor: "pointer"}}><img src="icon (2).png" /><span>receiver</span></MinBox2>
-              <MinBox3 style={{cursor: "pointer"}}><img src="icon (3).png" /><span>guest</span></MinBox3>
+              <MinBox1 style={{cursor: "pointer"}}><img src="icon (1).png" alt="icon"/><span>sender</span></MinBox1>
+              <MinBox2 style={{cursor: "pointer"}}><img src="icon (2).png" alt="icon"/><span>receiver</span></MinBox2>
+              <MinBox3 style={{cursor: "pointer"}}><img src="icon (3).png" alt="icon"/><span>guest</span></MinBox3>
             </MinBoxWrap>
-            <Box1><span style={{cursor: "pointer"}}><img src="icon (4).png" />Adam Rewana Ikoyin Estate, Ikoyi</span><CloseIcon style={{cursor: "pointer"}}/></Box1>
+            <Box1><span style={{cursor: "pointer"}}><img src="icon (4).png" alt="icon"/>Adam Rewana Ikoyin Estate, Ikoyi</span><CloseIcon style={{cursor: "pointer"}}/></Box1>
 
             <Box2>
-            <span style={{cursor: "pointer"}}><H7><img src="icon (5).png" /><a>3, Idumota Lane, Lagos Island</a></H7><CloseIcon style={{cursor: "pointer"}}/></span>
-            <span style={{cursor: "pointer"}}><H8><img src="icon (6).png" /><a>Rasheed Aderanmisie</a></H8><CloseIcon style={{cursor: "pointer"}}/> </span>
-            <span style={{cursor: "pointer"}}><H9><img src="icon (7).png" /><a><input type="number" id="number" placeholder="+234 | 809 000 4030"/></a></H9><CloseIcon style={{cursor: "pointer"}}/></span>
-            <span style={{cursor: "pointer"}}><H10><img src="icon (8).png" /><a>A new pair of adidas shoes</a></H10><CloseIcon style={{cursor: "pointer"}}/></span>
+            <span style={{cursor: "pointer"}}><H7><img src="icon (5).png" alt="icon"/><button>3, Idumota Lane, Lagos Island</button></H7><CloseIcon style={{cursor: "pointer"}}/></span>
+            <span style={{cursor: "pointer"}}><H8><img src="icon (6).png" alt="icon"/><button>Rasheed Aderanmisie</button></H8><CloseIcon style={{cursor: "pointer"}}/> </span>
+            <span style={{cursor: "pointer"}}><H9><img src="icon (7).png" alt="icon"/><button><input type="number" id="number" placeholder="+234 | 809 000 4030"/></button></H9><CloseIcon style={{cursor: "pointer"}}/></span>
+            <span style={{cursor: "pointer"}}><H10><img src="icon (8).png" alt="icon"/><button>A new pair of adidas shoes</button></H10><CloseIcon style={{cursor: "pointer"}}/></span>
             </Box2>
             <Box3>
-              <li><Icon1><MopedIcon/><a>Bike</a><BikePrice>N2,240</BikePrice></Icon1><Icon4><ExpandLessIcon/></Icon4></li>
-              <li><Icon2><SmsIcon/><a>Please call Ali the securit..</a></Icon2><Icon6><ExpandLessIcon/></Icon6></li>
-              <li><Icon3><PaymentsIcon/><a>Receive cash for me</a><span>NGN 30,000</span></Icon3><Icon5><ExpandLessIcon/></Icon5></li>
+              <li><Icon1><MopedIcon/><button>Bike</button><BikePrice>N2,240</BikePrice></Icon1><Icon4><ExpandLessIcon/></Icon4></li>
+              <li><Icon2><SmsIcon/><button>Please call Ali the securit..</button></Icon2><Icon6><ExpandLessIcon/></Icon6></li>
+              <li><Icon3><PaymentsIcon/><button>Receive cash for me</button><span>NGN 30,000</span></Icon3><Icon5><ExpandLessIcon/></Icon5></li>
             </Box3>
             
             <BottomBtn>
@@ -266,7 +262,7 @@ padding-top: 15px;
 
 }
 
-a {
+button {
   text-decoration: none; 
   color: #6E6E6E;
 }
@@ -297,8 +293,8 @@ li {
    
    border-top: 1px solid #6E6E6E;
    padding-bottom: 15px;
-  a {
 
+   button {
     text-decoration: none; 
     color: #6E6E6E;
     
@@ -487,7 +483,7 @@ margin-right: ;
 
 }
 
-a {
+button {
   text-decoration: none;
   color: black;
   display: flex;
@@ -530,7 +526,7 @@ li {
   color: #6E6E6E;  
 }
 
-a {
+button {
   color: black;
   font-weight: bold;
   margin-left: 10px;

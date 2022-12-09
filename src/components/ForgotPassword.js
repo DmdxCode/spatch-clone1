@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import WestIcon from '@mui/icons-material/West'
 import EmailIcon from '@mui/icons-material/Email';
-import LockIcon from '@mui/icons-material/Lock';
 
 function ForgotPassword() {
   return (
@@ -21,7 +20,7 @@ function ForgotPassword() {
             <EmailIconWrap><EmailIcon/></EmailIconWrap> <span> <input placeholder="Email" type="text" id="@" required/></span>
             </LoginInput1>
             <Button>Continue to reset</Button>
-            <footer>By continuing, you agree to our <a href="#">Privacy Policy</a><br/>and our <a href="#">Terms of Service</a></footer>
+            <footer>By continuing, you agree to our <button>Privacy Policy</button><br/>and our <button>Terms of Service</button></footer>
            </Content> 
 
         </Container>
@@ -82,7 +81,7 @@ footer{
     color: #6E6E6E;
    }
 
-   a {
+   button {
     font-weight: bold;
     text-decoration: none;
     color: #7000F6;
@@ -164,19 +163,8 @@ background-color: #f2f2f2;
 height: 100px;
 color: red;
 `
-const Button3 = styled(Button2)`
-height: 200px;
 
-`
-const Button4 = styled(Button2)`
-height: 200px;
-
-`
 const Button5 = styled(Button2)`
 height: 80px;
 
-`
-const Button6 = styled(Button2)`
-height: 200px;
-color: red;
 `

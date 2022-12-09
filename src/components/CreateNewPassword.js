@@ -1,15 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import WestIcon from '@mui/icons-material/West'
-import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import LockIcon from '@mui/icons-material/Lock';
-import VisibilityIcon from '@mui/icons-material/Visibility';
 
 function CreateNewPassword() {
   return (
     <>
     <Header>
-        <h1>spatch <img src= "./pop,logo.jpg" /> </h1>
+        <h1>spatch <img src= "./pop,logo.jpg" alt="logo" /> </h1>
     </Header>
     
     <Container>
@@ -92,11 +89,7 @@ padding-bottom: 0px;
     text-decoration: none;
    }
 `
-const Arrow = styled.div`
-color: #7000F6;
-cursor: pointer;
 
-`
 const Background = styled.div`
 position: fixed;
 background-color: #f2f2f2;
@@ -162,18 +155,10 @@ input {
 
 
 `
-const SmartphoneIconWrap = styled.div`
-color:#848484 ;
-`
+
 const LockIconWrap = styled.div`
 color:#848484 ;
 
-`
-const EyeIcon = styled.div`
-color:#848484 ;
-cursor: pointer;
-display: flex;
-justify-content: end;
 `
 
 const Button = styled.div`

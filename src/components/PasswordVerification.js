@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import WestIcon from '@mui/icons-material/West'
 import LockIcon from '@mui/icons-material/Lock';
 function PasswordVerification() {
   return (
@@ -113,11 +112,6 @@ const Content = styled.div`
 
 `
 
-const Arrow = styled.div`
-color: #7000F6;
-cursor: pointer;
-padding-top: 0px;
-`
 const CodeInput = styled.div`
 border-bottom: 2px solid #7000F6;
 padding-bottom: 10px;

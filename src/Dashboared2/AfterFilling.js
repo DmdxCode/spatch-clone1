@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import CircleIcon from '@mui/icons-material/Circle';
 import WalletIcon from '@mui/icons-material/Wallet';
 import AccountCircleTwoToneIcon from '@mui/icons-material/AccountCircleTwoTone';
-import AddIcon from '@mui/icons-material/Add';
 import Inventory2Icon from '@mui/icons-material/Inventory2';
 import LogoutIcon from '@mui/icons-material/Logout';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
@@ -12,14 +10,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ErrorOutlineRoundedIcon from '@mui/icons-material/ErrorOutlineRounded';
 import WestIcon from '@mui/icons-material/West';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import GpsNotFixedOutlinedIcon from '@mui/icons-material/GpsNotFixedOutlined';
-import MopedIcon from '@mui/icons-material/Moped';
-import PaymentsIcon from '@mui/icons-material/Payments';
-import SmsIcon from '@mui/icons-material/Sms';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import ExpandLessIcon from '@mui/icons-material/ExpandLess';
-import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import Person from '@mui/icons-material/Person';
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
@@ -40,7 +30,7 @@ function AfterFilling() {
                 <CustomClose onClick={() => setburgerStatus(false)}/>
                 <ul key={burgerStatus.id}></ul>
                 <ProfileImg>
-                  <img src="Profilepic.jpeg" alt="profile picture"/>
+                  <img src="Profilepic.jpeg" alt="profile"/>
                 </ProfileImg>
                 <Text1>Elijah Solomon</Text1>
                 <Text2>View Profile</Text2>
@@ -60,15 +50,15 @@ function AfterFilling() {
                <Container3>
                 <List1>
                   
-                <li><a href="#" id="1"><ArrowOutwardIcon/>  Request </a></li>
-                <li><a href="#" id="3"><WalletIcon />  Wallet</a></li>
-                <li><a href="#" id="3"><Inventory2Icon/> History</a></li>
-                <RequestWrap><li><a href="#" id="4"><AccountCircleTwoToneIcon style={{color: "#7000f6"}} /> Account</a></li><span>.</span></RequestWrap>
+                <li><button><ArrowOutwardIcon/>  Request </button></li>
+                <li><button><WalletIcon />  Wallet</button></li>
+                <li><button><Inventory2Icon/> History</button></li>
+                <RequestWrap><li><button><AccountCircleTwoToneIcon style={{color: "#7000f6"}} /> Account</button></li><span>.</span></RequestWrap>
                 </List1>
 
                 <List2>
-                <li><a href="#" id="3"><LogoutIcon />  Logout</a></li>
-                <li><a href="#" id="3"><SupportAgentIcon />  Contact</a></li>
+                <li><button><LogoutIcon />  Logout</button></li>
+                <li><button><SupportAgentIcon />  Contact</button></li>
                 </List2>
                 <footer>spatch<img src="pop,logo.jpg" alt="logo"/></footer>
                 
@@ -79,7 +69,7 @@ function AfterFilling() {
             <MasterBox>
                 <h1>Personal Information</h1>
                 <h6>Add your details. We recommend uploading a photo.<br/>You'll be able to change it later.</h6>
-                <Profile style={{cursor: "pointer"}}><img src="Profilepic.jpeg" alt="profile picture"/> Change profile image</Profile>
+                <Profile style={{cursor: "pointer"}}><img src="Profilepic.jpeg" alt="profile" /> Change profile image</Profile>
                 <NameWrap>
                   <li><input placeholder='First Name' name="First Name" type="text"></input><Person /></li>
                   <li><input placeholder='Last Name' type="text" name="Last Name"></input><Person/></li>
@@ -102,7 +92,7 @@ function AfterFilling() {
                 <submit>Save Changes</submit>
                 </SubmitBtn>
             </MasterBox>
-            <BottomAddIcon><img src="add icon img-modified (1).png"/></BottomAddIcon>
+            <BottomAddIcon><img src="add icon img-modified (1).png" alt="icon"/></BottomAddIcon>
             </Content> 
         </Container>
 
@@ -254,7 +244,7 @@ padding-top: 10px;
  
 }
 
-a {
+button {
   text-decoration: none; 
   color: #6E6E6E;
 }
@@ -284,7 +274,8 @@ li {
    
    border-top: 1px solid #6E6E6E;
    padding-bottom: 10px;
-  a {
+
+  button {
 
     text-decoration: none; 
     color: #6E6E6E;
@@ -562,8 +553,4 @@ img{
 `
 const H8 = styled.div`
   
-`
-const Icon = styled.div`
-display: flex;
-justify-content: end;
 `

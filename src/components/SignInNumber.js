@@ -9,7 +9,7 @@ function SignInNumber() {
   return (
     <>
     <Header>
-        <h1>spatch <img src= "./pop,logo.jpg" /> </h1>
+        <h1>spatch <img src= "./pop,logo.jpg"  alt="logo"/> </h1>
     </Header>
     
     <Container>
@@ -30,7 +30,7 @@ function SignInNumber() {
           </LogininInput2>
           <h6>Forgot password?</h6>
           <Button>Sign in Spatch</Button>
-          <footer>By continuing, you agree to our <a href="#">Privacy Policy</a><br/> and our <a href="#">Terms of Service</a></footer>
+          <footer>By continuing, you agree to our <button>Privacy Policy</button><br/> and our <button>Terms of Service</button></footer>
       </Content>
     </Container>
     </>
@@ -85,7 +85,7 @@ background-color: #f2f2f2;
     color: #6E6E6E;
    }
 
-   a {
+   button {
     font-weight: bold;
     text-decoration: none;
    }
