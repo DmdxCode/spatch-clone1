@@ -37,6 +37,7 @@ function Welcome() {
 export default Welcome
 
 const Header = styled.div`
+paddind-left: 10px;
 background-color: #f2f2f2;
 overflow: hidden;
 @media (min-max: 1000px) {
