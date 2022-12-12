@@ -454,33 +454,6 @@ const BtnTopText = styled.div`
 color: black;
 font-weight: bold;
 `
-const BottomAddIcon = styled.div`
-
-  display: flex;
-  justify-content: bottom;
-  padding-right: 20px; 
-  img{   
-  height: 50% ;
-  width: 15%;
-  
-  }
-
-margin-top: 50px;
-img{
-  
-  margin-right: 20px;
-  -moz-box-shadow: 0px 5px 5px #fff;
-  -webkit-box-shadow: 0px 5px 5px #fff;
-  box-shadow: 0px 10px 35px #7000f6;
-  -moz-border-radius:50px;
-  -webkit-border-radius:190px;
-  cursor: pointer;
-  height: 10%;
-  width: 7%;
-
-
-}
-`
 const Img = styled.div`
 display: flex;
 justify-content: end;
