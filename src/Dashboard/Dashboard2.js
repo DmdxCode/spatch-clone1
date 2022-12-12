@@ -330,13 +330,15 @@ color: #7000f6;
 `
 
 const Content = styled.div`
-@media (min-width: 1000px) {
+@media (max-width: 1000px) {
   display: flex-box;
   justify-content: center;
   align-items: center;
-  overflow: hidden; 
-   padding-left: 300px;
-   padding-right: 300px;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5vh;
+}
 }
 
 `
@@ -348,7 +350,7 @@ const Btn1 = styled.div`
 margin-right: 13px;
 height: 150px;
 background-color: #7000f6;
-width: 240px;
+width: 210px;
 border-radius: 20px;
 cursor: pointer;
 
@@ -371,7 +373,7 @@ span {
 const Btn4 = styled.div`
 height: 150px;
 background-color: #FFB947;
-width: 240px;
+width: 210px;
 border-radius: 20px;
 cursor: pointer;
 
@@ -397,7 +399,7 @@ const Btn2 = styled.div`
 
 height: 150px;
 background-color: #15B1E1;
-width: 140px;
+width: 150px;
 border-radius: 20px;
 cursor: pointer;
 
@@ -427,7 +429,7 @@ margin-bottom: 30px;
 const Btn3 = styled.div`
 height: 150px;
 background-color: #02C964;
-width: 140px;
+width: 150px;
 border-radius: 20px;
 margin-right: 13px;
 cursor: pointer;
