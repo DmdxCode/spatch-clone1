@@ -74,11 +74,11 @@ function Dashboard2() {
             <Content>
               <BtnTopText>Would you like to request?</BtnTopText>
               <BtnWrap1>
+              <Link to="/Sameday" style={{textDecoration: "none"}}>
                 <Btn1><Img><img src="pop,logo.jpg" alt="icon"/></Img> 
-               
                   <span>Same Day</span>
                 </Btn1>
-              
+              </Link>
                 <Btn2><Img><img src="pop,logo.jpg" alt="icon"/></Img><span>Express</span></Btn2>
               </BtnWrap1>
 
@@ -114,7 +114,6 @@ padding-right: 10px;
 padding-top: 70px;
 padding-bottom: 0px;
 overflow: hidden;
-position: fixed;
 
 
 footer {
@@ -349,7 +348,7 @@ const Btn1 = styled.div`
 margin-right: 13px;
 height: 150px;
 background-color: #7000f6;
-width: 220px;
+width: 240px;
 border-radius: 20px;
 cursor: pointer;
 
@@ -372,7 +371,7 @@ span {
 const Btn4 = styled.div`
 height: 150px;
 background-color: #FFB947;
-width: 220px;
+width: 240px;
 border-radius: 20px;
 cursor: pointer;
 
@@ -398,7 +397,7 @@ const Btn2 = styled.div`
 
 height: 150px;
 background-color: #15B1E1;
-width: 130px;
+width: 140px;
 border-radius: 20px;
 cursor: pointer;
 
@@ -428,7 +427,7 @@ margin-bottom: 30px;
 const Btn3 = styled.div`
 height: 150px;
 background-color: #02C964;
-width: 130px;
+width: 140px;
 border-radius: 20px;
 margin-right: 13px;
 cursor: pointer;
