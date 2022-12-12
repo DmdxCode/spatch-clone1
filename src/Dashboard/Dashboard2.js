@@ -47,7 +47,7 @@ function Dashboard2() {
                </Container2>
                <Container3>
                 <List1>
-                  <Link to="/RequestAsSender2" style={{textDecoration: "none"}}>
+                  <Link to="/Dashboard2" style={{textDecoration: "none"}}>
                     <RequestWrap>
                       <li><button><ArrowOutwardIcon style={{color: '#7000f6'}}/>  Request </button></li><span>.</span>
                     </RequestWrap>

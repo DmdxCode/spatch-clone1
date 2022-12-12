@@ -49,7 +49,7 @@ function Wallet() {
                </Container2>
                <Container3>
                 <List1>
-                <Link to="/RequestAsSender" style={{textDecoration: "none"}}>
+                <Link to="/Dashboard2" style={{textDecoration: "none"}}>
                  <li><button id="1"><ArrowOutwardIcon/>  Request </button></li>
                 </Link>
                 <Link to="/Wallet" style={{textDecoration: "none"}}>
@@ -77,7 +77,7 @@ function Wallet() {
             </BurgerNav>
             <Content>
               <TopArrow><WestIcon/><span>Wallet</span></TopArrow>
-              <BtnTopText><h3>Welcome to your Wallet, Fisayo<br/><h6>Add money to your wallet to enjoy more inotuitive experience</h6></h3> </BtnTopText>
+              <BtnTopText><h3>Welcome to your Wallet, Fisayo<br/><h6>Add money to your wallet to enjoy more intuitive experience</h6></h3> </BtnTopText>
               <BtnWrap1>
                 <Btn1>
                   Balance<br/><span>NGN 10,000</span>
@@ -464,6 +464,9 @@ button {
 const BtnTopText = styled.div`
 color: black;
 font-weight: bold;
+h6 {
+  font-weight: 400;
+}
 `
 const BottomAddIcon = styled.div`
   padding-top: 50px;

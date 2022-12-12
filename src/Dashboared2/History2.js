@@ -53,7 +53,7 @@ function History2() {
                </Container2>
                <Container3>
                 <List1>
-                <Link to="/RequestAsSender" style={{textDecoration: "none"}}>
+                <Link to="/Dashboard2" style={{textDecoration: "none"}}>
                   <li><button><ArrowOutwardIcon/>  Request </button></li>
                 </Link>
                 <Link to="/Wallet" style={{textDecoration: "none"}}>

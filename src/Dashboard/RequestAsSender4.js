@@ -80,7 +80,7 @@ function RequestAsSender4() {
                </Container3>
             </BurgerNav>
             <Content>
-            <Link to="/RequestAsSender3" style={{textDecoration: "none"}}>
+            <Link to="/Dashboard2" style={{textDecoration: "none"}}>
              <Arrow><WestIcon style={{cursor: "pointer"}}/><span>Request</span></Arrow>
             </Link>
            <MasterBox>

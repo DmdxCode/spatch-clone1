@@ -54,7 +54,7 @@ function RequestAsSender2() {
                </Container2>
                <Container3>
                 <List1>
-                  <Link to="/RequestAsSender" style={{textDecoration: "none"}}>
+                  <Link to="/Dashboard2" style={{textDecoration: "none"}}>
                     <RequestWrap>
                       <li><button id="1"><ArrowOutwardIcon style={{color: "#7000f6"}}/>  Request </button></li><span>.</span>
                     </RequestWrap>
