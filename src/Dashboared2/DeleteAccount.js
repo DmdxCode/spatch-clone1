@@ -18,7 +18,7 @@ function DeleteAccount() {
                     <KeyboardBackspaceIcon fontSize="small" style={{paddingTop: "23px", color: "#7000f6"}}/>
                   </Link>
                   <h3>I want to delete my account</h3>
-                  <Link to="/Dashboard1" style={{textDecoration: "none", color: "black"}}>
+                  <Link to="/Dashboard2" style={{textDecoration: "none", color: "black"}}>
                     <img src="cancle icon.png" alt="icon"/>
                   </Link>
                 </span>

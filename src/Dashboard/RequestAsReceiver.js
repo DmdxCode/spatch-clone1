@@ -80,7 +80,7 @@ function RequestAsReceiver () {
                 </Container3>
             </BurgerNav>
             <Content>
-            <Link to="/Dashboard1" style={{textDecoration: "none"}}>
+            <Link to="/Dashboard2" style={{textDecoration: "none"}}>
               <Arrow><WestIcon/><span>Request</span></Arrow>
             </Link>
            <MasterBox>
@@ -140,8 +140,8 @@ const Container = styled.div`
 }
 
 
-padding-left: 30px;
-padding-right: 30px;
+padding-left: 10px;
+padding-right: 10px;
 padding-top: 0px;
 padding-bottom: 0px;
 
