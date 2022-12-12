@@ -84,7 +84,7 @@ function Dashboard2() {
 
               <BtnWrap2>
                 <Btn3><Img><img src="pop,logo.jpg" alt="icon"/></Img><span>Interstate</span></Btn3>
-                <Btn4><Img><img src="pop,logo.jpg" alt="icon"/></Img><span>International</span></Btn4>
+                <Btn4><Img><img src="pop,logo.jpg" alt="ico3"/></Img><span>International</span></Btn4>
               </BtnWrap2>
               
             </Content> 
