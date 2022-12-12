@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import LockIcon from '@mui/icons-material/Lock';
 
@@ -21,8 +22,9 @@ function CreateNewPassword() {
         <LogininInput2>
            <LockIconWrap><LockIcon/></LockIconWrap> <span><input placeholder="Confirm password" type="number text" id="password" required/></span>
         </LogininInput2>
-
-        <Button>Continue</Button>
+        <Link to="/ResetDashboard" style={{textDecoration: "none"}}>
+         <Button>Continue</Button>
+        </Link>
       </Content>
     </Container>
     </>
@@ -33,6 +35,7 @@ export default CreateNewPassword
 
 const Header = styled.div`
 font-weight: bold;
+padding-left: 10px;
 background-color: #f2f2f2;
 color: #7000f6;
 overflow: hidden;

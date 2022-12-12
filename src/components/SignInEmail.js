@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 import WestIcon from '@mui/icons-material/West'
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
@@ -16,7 +17,9 @@ function SignInEmail() {
     <Container>
       <Content>
         <Background></Background>
+        <Link to="/" style={{textDecoration: "none"}}>
         <Arrow><WestIcon/></Arrow>
+        </Link>
         <h1>Sign in to Spatch.</h1>
         <h7>please enter your sign in detail</h7>
         <LoginInput1>
@@ -29,9 +32,13 @@ function SignInEmail() {
               <VisibilityIcon />
            </LockIconWrap>
         </LogininInput2>
-        <h6>Forgot password?</h6>
+        <Link to="/ForgotPassword" style={{textDecoration: "none"}}>
+         <h6>Forgot password?</h6>
+        </Link>
+        <Link to="/Dashboard2" style={{textDecoration: "none"}}>
         <Button>Sign in Spatch</Button>
         <footer>By continuing, you agree to our <button>Privacy Policy</button>and our <button>Terms of Service</button></footer>
+        </Link>
       </Content>
     </Container>
     </Body>
@@ -47,6 +54,7 @@ const Header = styled.div`
 font-weight: bold;
 overflow: hidden; 
 color: #7000f6;
+padding-left: 10px;
      img {
         height: 22px;
 
@@ -87,6 +95,9 @@ background-color: #f2f2f2;
    }
 
    button {
+    border: none;
+    color: #7000f6;
+    background-color: #f2f2f2;
     font-weight: bold;
     text-decoration: none;
    }

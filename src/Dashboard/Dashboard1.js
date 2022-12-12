@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import WalletIcon from '@mui/icons-material/Wallet';
@@ -11,7 +12,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import ErrorOutlineRoundedIcon from '@mui/icons-material/ErrorOutlineRounded';
 
 function Dashboard1() {
-    const [burgerStatus, setburgerStatus] = useState(true);
+    const [burgerStatus, setburgerStatus] = useState(false);
   return (
     <>
     <TopIconWrap>
@@ -46,11 +47,20 @@ function Dashboard1() {
                </Container2>
                <Container3>
                 <List1>
+                <Link to="/RequestAsSender" style={{textDecoration: "none"}}>
                   <RequestWrap>
-                <li><button><ArrowOutwardIcon style={{color: '#7000f6'}} />  Request </button></li><span>.</span></RequestWrap>
-                <li><button><WalletIcon />  Wallet</button></li>
-                <li><button><Inventory2Icon/> History</button></li>
-                <li><button><AccountCircleTwoToneIcon /> Account</button></li>
+                    <li><button><ArrowOutwardIcon style={{color: '#7000f6'}} />  Request </button></li><span>.</span>
+                  </RequestWrap>
+                </Link>
+                <Link to="/Wallet" style={{textDecoration: "none"}}>
+                  <li><button><WalletIcon />  Wallet</button></li>
+                </Link>
+                <Link to="/History" style={{textDecoration: "none"}}>
+                  <li><button><Inventory2Icon/> History</button></li>
+  	            </Link>
+                <Link to="/AfterFilling" style={{textDecoration: "none"}}>
+                  <li><button><AccountCircleTwoToneIcon /> Account</button></li>
+                </Link>
                 </List1>
 
                 <List2>
@@ -65,7 +75,9 @@ function Dashboard1() {
               <BtnTopText>Would you like to request?</BtnTopText>
               
               <BtnWrap1>
+              <Link to="/Sameday" style={{textDecoration: "none"}}>
                 <Btn1><span><Img><img src="pop,logo.jpg" alt="icon"/></Img>Same Day</span></Btn1>
+              </Link>
                 <Btn2><span><Img><img src="pop,logo.jpg" alt="icon"/></Img>Express</span></Btn2>
               </BtnWrap1>
 
@@ -240,6 +252,9 @@ padding-top: 15px;
 }
 
 button {
+  border: none;
+  background-color: #f2f2f2;
+  font-weight: bold;
   text-decoration: none; 
   color: #6E6E6E;
 }
@@ -271,7 +286,9 @@ li {
    border-top: 1px solid #6E6E6E;
    padding-bottom: 15px;
    button {
-
+    border: none;
+    background-color: #f2f2f2;
+    font-weight: bold;
     text-decoration: none; 
     color: #6E6E6E;
     

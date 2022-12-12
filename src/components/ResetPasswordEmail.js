@@ -56,13 +56,13 @@ const MasterContainer = styled.div`
     align-items: center;
   
     overflow: hidden; 
-    padding-left: 200px;
-    padding-right: 200px; 
+    padding-left: 100px;
+    padding-right: 100px; 
   }
   
   overflow: hidden;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
   padding-top: 0px;
   padding-bottom: 0px;
   background-color: #f2f2f2;
@@ -187,8 +187,11 @@ footer {
 }
 
 button {
-   font-weight: bold;
-   cursor: pointer;
+    border: none;
+    background-color: #7000f6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 `

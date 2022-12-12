@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import WalletIcon from '@mui/icons-material/Wallet';
@@ -51,11 +52,20 @@ function NewPassword() {
                </Container2>
                <Container3>
                 <List1>
-                  <RequestWrap>
-                <li><button><ArrowOutwardIcon/>  Request </button></li><span>.</span></RequestWrap>
-                <li><button><WalletIcon />  Wallet</button></li>
-                <li><button><Inventory2Icon/> History</button></li>
-                <li><button><AccountCircleTwoToneIcon /> Account</button></li>
+                  <Link to="/RequestAsSender" style={{textDecoration: "none"}}>
+                   <li><button><ArrowOutwardIcon/>  Request </button></li>
+                  </Link>
+                  <Link to="/Wallet" style={{textDecoration: "none"}}>
+                   <li><button><WalletIcon />  Wallet</button></li>
+                  </Link>
+                  <Link to="/History" style={{textDecoration: "none"}}>
+                   <li><button><Inventory2Icon/> History</button></li>
+                  </Link>
+                  <Link to="/AfterFilling" style={{textDecoration: "none"}}>
+                    <AccountWrap>
+                      <li><button><AccountCircleTwoToneIcon style={{color: "#7000f6"}}/> Account</button></li><span>.</span>
+                    </AccountWrap>
+                </Link>
                 </List1>
 
                 <List2>
@@ -84,9 +94,11 @@ function NewPassword() {
                 <Code>
                   <li><input placeholder='Current New Password' type="password" name="current new password" /><Visibility/></li>
                 </Code>
-                <SubmitBtn>
-                <submit>Save Changes</submit>
-                </SubmitBtn>
+                <Link to="/AfterFilling" style={{textDecoration: "none"}}>
+                  <SubmitBtn>
+                    <submit>Save Changes</submit>
+                  </SubmitBtn>
+                </Link>
             </MasterBox>
             <BottomAddIcon><img src="add icon img-modified (1).png" alt="icon"/></BottomAddIcon>
             </Content> 
@@ -243,13 +255,17 @@ padding-top: 25px;
 }
 
 button {
+  
+  border: none;
+  background-color: #f2f2f2;
+  font-weight: bold;
   text-decoration: none; 
   color: #6E6E6E;
 }
 
 
 `
-const RequestWrap = styled.div`
+const AccountWrap = styled.div`
 display: flex;
 align-items: center;
 span{
@@ -272,8 +288,11 @@ li {
    
    border-top: 1px solid #6E6E6E;
    padding-bottom: 15px;
-   button {
 
+   button {
+    border: none;
+    background-color: #f2f2f2;
+    font-weight: bold;
     text-decoration: none; 
     color: #6E6E6E;
     

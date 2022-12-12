@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import WalletIcon from '@mui/icons-material/Wallet';
@@ -48,18 +49,27 @@ function Wallet() {
                </Container2>
                <Container3>
                 <List1>
-                  
-                <li><button id="1"><ArrowOutwardIcon/>  Request </button></li>
-                <WalletFlexWrap>
-                  <li><span><WalletIcon style={{color: "#7000f6", marginTop: "2px"}}/></span><button> Wallet</button></li><WalletWrap><span>.</span></WalletWrap>
-                </WalletFlexWrap>
-                <li><button id="3"><Inventory2Icon/> History</button></li>
-                <li><button id="4"><AccountCircleTwoToneIcon /> Account</button></li>
+                <Link to="/RequestAsSender" style={{textDecoration: "none"}}>
+                 <li><button id="1"><ArrowOutwardIcon/>  Request </button></li>
+                </Link>
+                <Link to="/Wallet" style={{textDecoration: "none"}}>
+                  <WalletFlexWrap>
+                    <li><span><WalletIcon style={{color: "#7000f6", marginTop: "2px"}}/></span><button> Wallet</button></li><WalletWrap><span>.</span></WalletWrap>
+                  </WalletFlexWrap>
+                </Link>
+                <Link to="/History" style={{textDecoration: "none"}}>
+                 <li><button id="3"><Inventory2Icon/> History</button></li>
+                </Link>
+                <Link to="/AfterFilling" style={{textDecoration: "none"}}>
+                 <li><button id="4"><AccountCircleTwoToneIcon /> Account</button></li>
+                </Link>
                 </List1>
 
                 <List2>
                 <li><button id="3"><LogoutIcon />  Logout</button></li>
-                <li><button id="3"><SupportAgentIcon/>  Contact</button></li>
+                <Link to="/Help" style={{textDecoration: "none"}}>
+                  <li><button><SupportAgentIcon/>  Contact</button></li>
+                </Link>
                 </List2>
                 <footer>spatch<img src="pop,logo.jpg" alt="icon"/></footer>
                 
@@ -238,6 +248,10 @@ padding-top: 15px;
 }
 
 button {
+  
+ border: none;
+ background-color: #f2f2f2;
+ font-weight: bold;
   text-decoration: none; 
   color: #6E6E6E;
 }
@@ -274,6 +288,9 @@ li {
    padding-bottom: 15px;
    button {
 
+    border: none;
+    background-color: #f2f2f2;
+    font-weight: bold;
     text-decoration: none; 
     color: #6E6E6E;
     
@@ -426,18 +443,22 @@ background-color: #f2f2f2;
 width: 205px;
 border-radius: 10px;
 cursor: pointer;
+display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
 span {
   font-weight: bold;
   color: #6e6e6e;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
   padding-top: 30px;
 }
 
 button {
-  padding-left: 35px;
+  border: none;
+  background-color: #f2f2f2;
+  font-weight: bold;
 }
 `
 const BtnTopText = styled.div`

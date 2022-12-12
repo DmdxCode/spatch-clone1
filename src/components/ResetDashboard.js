@@ -1,21 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
 function ResetDashboard() {
   return (
     <>
     <Header>
-    <h1>spatch<img src="pop,logo.jpg"  alt="logo"/></h1>
+      <h1>spatch<img src="pop,logo.jpg"  alt="logo"/></h1>
+      <Link to="/Dashboard1" style={{textDecoration: "none", color: "white"}}>
+       <ArrowForwardIosIcon fontSize='large' style={{color: "color", paddingRight: "20px", marginTop: "20px", cursor: "pointer"}}/>
+      </Link>
     </Header>
 
-
     <Container>
-    <Background></Background>
-    <Text>
-    <IconWrap><CheckCircleIcon fontSize="large"/></IconWrap>
-    <h2>Welcome back Fisayo</h2>
-    <h5>Enjoy the service</h5>
-    </Text>  
+      <Background></Background>
+      <Text>
+        <IconWrap><CheckCircleIcon fontSize="large"/></IconWrap>
+        <h2>Welcome back Fisayo</h2>
+        <h5>Enjoy the service</h5>
+      </Text>  
     </Container>
     </>
   )
@@ -24,25 +29,21 @@ function ResetDashboard() {
 export default ResetDashboard
 
 const Header = styled.div`
+display: flex;
+justify-content: space-between;
 overflow: hidden;
 background-color: #7000F6;
 color: white;
 border: 10px solid #7000F6;
 margin-left: 0px;
 
-
 h1 {
 
   font-weight: bold;
-  color: #F2F2F2; 
-  
-
-
+  color: white; 
 
    img {
       height: 22px;
-
-
    }
   }
 
@@ -90,7 +91,7 @@ z-index: -1;
 `
 
 const IconWrap = styled.div`
-padding-top: 250px;
+padding-top: 200px;
 color: #00CC5B;
 display: flex;
 justify-content: center;
@@ -106,14 +107,14 @@ color: white;
 margin-top: 0px;
 h2 {
     
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: flex;
     
     
 }
 
 h5 {
-    
+    font-weight: 500;
     margin-top: 11px;
 
 }

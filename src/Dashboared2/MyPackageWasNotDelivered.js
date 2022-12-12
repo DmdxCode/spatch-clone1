@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import WalletIcon from '@mui/icons-material/Wallet';
@@ -63,7 +64,15 @@ function MyPackageWasNotDelivered() {
             <Content>
             
             <MasterBox>
-                <span><KeyboardBackspaceIcon fontSize="small" style={{paddingTop: "23px", color: "#7000f6"}}  /><h3>My package was not delivered</h3><img src="cancle icon.png" alt="icon"/></span>
+                <span>
+                  <Link to="/Help" style={{textDecoration: "none", color: "black"}}>
+                    <KeyboardBackspaceIcon fontSize="small" style={{paddingTop: "23px", color: "#7000f6"}}/>
+                  </Link>
+                  <h3>My package was not delivered</h3>
+                  <Link to="/Dashboard1" style={{textDecoration: "none", color: "black"}}>
+                    <img src="cancle icon.png" alt="icon"/>
+                  </Link>
+                </span>
                 <h6>If you can figure it out, you can contact support team.</h6>
                 
             <Input1>

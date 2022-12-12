@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import WalletIcon from '@mui/icons-material/Wallet';
@@ -52,28 +53,45 @@ function RequestAsSender() {
                </Container2>
                <Container3>
                 <List1>
+                <Link to="/RequestAsSender" style={{textDecoration: "none"}}>
                   <RequestWrap>
-                <li><button id="1"><ArrowOutwardIcon/>  Request </button></li><span>.</span></RequestWrap>
-                <li><button id="3"><WalletIcon />  Wallet</button></li>
-                <li><button id="3"><Inventory2Icon/> History</button></li>
-                <li><button id="4"><AccountCircleTwoToneIcon /> Account</button></li>
+                   <li><button id="1"><ArrowOutwardIcon style={{color: "#7000f6"}}/>  Request </button></li><span>.</span>
+                  </RequestWrap>
+                </Link>
+                <Link to="/Wallet" style={{textDecoration: "none"}}>
+                 <li><button id="3"><WalletIcon />  Wallet</button></li>
+                </Link>
+                <Link to="/History" style={{textDecoration: "none"}}>
+                 <li><button id="3"><Inventory2Icon/> History</button></li>
+                </Link>
+                <Link to="/AfterFilling" style={{textDecoration: "none"}}>
+                 <li><button id="4"><AccountCircleTwoToneIcon /> Account</button></li>
+                </Link>
                 </List1>
 
                 <List2>
                 <li><button id="3"><LogoutIcon />  Logout</button></li>
-                <li><button id="3"><SupportAgentIcon/>  Contact</button></li>
+                <Link to="/Help" style={{textDecoration: "none"}}>
+                        <li><button><SupportAgentIcon/>  Contact</button></li>
+                      </Link>
                 </List2>
                 <footer>spatch<img src="pop,logo.jpg" alt="logo"/></footer>
                 
                </Container3>
             </BurgerNav>
             <Content>
-            <Arrow><WestIcon style={{cursor: "pointer"}}/><span>Request</span></Arrow>
+            <Link to="/Sameday" style={{textDecoration: "none"}}>
+             <Arrow><WestIcon style={{cursor: "pointer"}}/><span>Request</span></Arrow>
+            </Link>
            <MasterBox>
             <BoxHead><span>Same Day</span><KeyboardArrowDownIcon fontSize="large" style={{cursor: "pointer"}}/></BoxHead>
             <MinBoxWrap>
               <MinBox1><img src="icon (1).png" alt="icon"/><span>sender</span></MinBox1>
-              <MinBox2><img src="icon (2).png" alt="icon"/><span>receiver</span></MinBox2>
+              <MinBox2>
+                <Link to="/RequestAsReceiver" style={{textDecoration: "none"}}>
+                  <img src="icon (2).png" alt="icon"/><span>receiver</span>
+                </Link>
+              </MinBox2>
               <MinBox3><img src="icon (3).png" alt="icon"/><span>guest</span></MinBox3>
             </MinBoxWrap>
             <Box1><span><img src="icon (4).png" alt="icon"/>Adam Rewana Ikoyin Estate, Ikoyi</span><CloseIcon style={{cursor: "pointer"}}/></Box1>
@@ -81,7 +99,7 @@ function RequestAsSender() {
             <Box2>
             <span><H7><img src="icon (5).png" alt="icon"/><button>3, Idumota Lane, Lagos Island</button></H7><CloseIcon style={{cursor: "pointer"}}/></span>
             <span><H8><img src="icon (6).png" alt="icon"/><button>Rasheed Aderanmisie</button></H8><CloseIcon style={{cursor: "pointer"}} /> </span>
-            <span><H9><img src="icon (7).png" alt="icon"/><button><input type="number" id="number" placeholder="+234 | 809 000 4030"/></button></H9><CloseIcon style={{cursor: "pointer"}}/></span>
+            <span><H9><img src="icon (7).png" alt="icon"/><button><input type="tel" id="tel" placeholder="+234 | 809 000 4030"/></button></H9><CloseIcon style={{cursor: "pointer"}}/></span>
             <span><H10><img src="icon (8).png" alt="icon"/><button>A new pair of adidas shoes</button></H10><CloseIcon style={{cursor: "pointer"}}/></span>
             </Box2>
             <Box3>
@@ -99,12 +117,12 @@ function RequestAsSender() {
               
               <li><Icon3><PaymentsIcon/><span>Receive cash for me</span></Icon3><Icon5><ExpandMoreIcon/></Icon5></li>
             </Box3>
-            
-            <BottomBtn>
-              <Amount>N2,240</Amount>
-              <span>Request Spatch<BtnIcon><KeyboardArrowRightIcon/></BtnIcon></span>
-
-            </BottomBtn>
+            <Link to="/RequestAsSender2" style={{textDecoration: "none"}}>
+              <BottomBtn>
+                <Amount>N2,240</Amount>
+                <span>Request Spatch<BtnIcon><KeyboardArrowRightIcon/></BtnIcon></span>
+              </BottomBtn>
+            </Link>
            </MasterBox>   
               
             </Content> 
@@ -275,6 +293,9 @@ padding-top: 15px;
 }
 
 button {
+  border: none;
+  background-color: #f2f2f2;
+  font-weight: bold;
   text-decoration: none; 
   color: #6E6E6E;
 }
@@ -305,8 +326,11 @@ li {
    
    border-top: 1px solid #6E6E6E;
    padding-bottom: 15px;
-  a {
-
+   
+  button {
+    border: none;
+    background-color: #f2f2f2;
+    font-weight: bold;
     text-decoration: none; 
     color: #6E6E6E;
     
@@ -497,10 +521,13 @@ margin-right: ;
 }
 
 button {
+  border: none;
+  background-color: white;
   text-decoration: none;
   color: black;
   display: flex;
   margin-left: 10px;
+  font-weight: 700;
 
 }
 `
@@ -540,6 +567,8 @@ li {
 }
 
 button {
+  border: none;
+  background-color: white;
   color: black;
   font-weight: bold;
   margin-left: 10px;

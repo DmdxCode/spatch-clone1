@@ -1,13 +1,19 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+
 function Dashboard() {
   return (
     <>
     <Header>
-    <h1>spatch<img src="pop,logo.jpg"  alt="logo"/></h1>
-    </Header>
+      <h1>spatch<img src="pop,logo.jpg"  alt="logo"/></h1>
 
+      <Link to="/Dashboard2" style={{textDecoration: "none", color: "white"}}>
+        <ArrowForwardIosIcon fontSize='large' style={{color: "color", paddingRight: "10px", marginTop: "20px", cursor: "pointer"}}/>
+      </Link>
+    </Header>
 
     <Container>
     <Background></Background>
@@ -24,6 +30,8 @@ function Dashboard() {
 export default Dashboard
 
 const Header = styled.div`
+display: flex;
+justify-content: space-between;
 overflow: hidden;
 background-color: #7000F6;
 color: white;
@@ -35,9 +43,6 @@ h1 {
 
   font-weight: bold;
   color: white; 
-  
-
-
 
    img {
       height: 22px;
@@ -104,15 +109,15 @@ color: white;
 margin-top: 0px;
 h2 {
     
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: flex;
     
     
 }
 
 h5 {
-    
-    margin-top: 11px;
+    font-weight: 400;
+    margin-top: 8px;
 
 }
 `

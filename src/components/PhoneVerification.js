@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import WestIcon from '@mui/icons-material/West';
 import LockIcon from '@mui/icons-material/Lock';
@@ -17,8 +18,9 @@ function PhoneVerification() {
                 <CodeInput>
                     <IconWrap><LockIcon/></IconWrap><input type='number' placeholder='Enter code'/>
                 </CodeInput>
-
-                <Button>Confirm</Button>
+                <Link to="/Dashboard" style={{textDecoration: "none"}}>
+                 <Button>Confirm</Button>
+                </Link>
                 <Text>Didn't get the mail?</Text>
 
                 <Text2>Verify that your email address is correct,<br/>or check your spam folder.</Text2>
@@ -35,6 +37,7 @@ function PhoneVerification() {
 export default PhoneVerification
 
 const Header = styled.div`
+padding-left: 10px;
 background-color: #f2f2f2;
 overflow: hidden;
 @media (min-max: 1000px) {

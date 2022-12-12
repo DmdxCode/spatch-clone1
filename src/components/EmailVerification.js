@@ -1,12 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 function EmailVerification() {
   return (
     <>
     <Header>
       <h1>spatch<img src="pop,logo.jpg"  alt="logo"/></h1>
+      <Link to="/RegistrationForm" style={{textDecoration: "none", color: "white"}}>
+       <ArrowForwardIosIcon fontSize='large' style={{color: "color", paddingRight: "10px", marginTop: "20px", cursor: "pointer"}}/>
+      </Link>
     </Header>
     <Body>
       <Background></Background>
@@ -60,12 +65,14 @@ z-index: -1;
 `
 
 const Header = styled.div`
+display: flex;
+justify-content: space-between;
 overflow: hidden;
 background-color: #7000F6;
 color: white;
 border: 10px solid #7000F6;
 margin-left: 0px;
-color: #f2f2f2;
+color: white;
 
      img {
         height: 22px;
@@ -85,7 +92,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-color: #f2f2f2;
+color: white;
 margin-top: 0px;
 h2 {  
     margin-bottom: 10px;

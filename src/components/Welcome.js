@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import WestIcon from '@mui/icons-material/West'
-
+import { Link } from 'react-router-dom'
 
 
 function Welcome() {
@@ -18,10 +18,16 @@ function Welcome() {
         <h7>Need to deliver your merchandise?<br/>
             <span>Let Spatch take care of that.</span>
         </h7>
-        <ButtonTop> 
-            Register with Spatch   
+        <Link to="/register" style={{textDecoration: "none"}}>
+        <ButtonTop>
+             
+            Register with Spatch
+           
         </ButtonTop>
+        </Link> 
+        <Link to="/loginEmail" style={{textDecoration: "none"}}>
         <ButtonDown>Sign in to Spatch</ButtonDown>
+        </Link>
       </Content>
     </Container>
     </>
@@ -45,6 +51,7 @@ overflow: hidden;
 h1 {
     color: #7000F6;
     font-weight: bold;
+    padding-left: 10px;
    
     
 }

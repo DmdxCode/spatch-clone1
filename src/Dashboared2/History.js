@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import WalletIcon from '@mui/icons-material/Wallet';
@@ -50,26 +51,37 @@ function History() {
                </Container2>
                <Container3>
                 <List1>
-                  
-                <li><button><ArrowOutwardIcon/>  Request </button></li>
-                <li><button><WalletIcon/> Wallet</button></li>
-                <HistoryFlexWrap>
-                <li><span><Inventory2Icon/></span> <button>History</button></li><WalletWrap><span>.</span></WalletWrap> 
-                </HistoryFlexWrap>
-                <li><button><AccountCircleTwoToneIcon /> Account</button></li>
+                <Link to="/RequestAsSender" style={{textDecoration: "none"}}>
+                  <li><button><ArrowOutwardIcon/>  Request </button></li>
+                </Link>
+                <Link to="/Wallet" style={{textDecoration: "none"}}>
+                 <li><button><WalletIcon/> Wallet</button></li>
+                </Link>
+                <Link to="/History" style={{textDecoration: "none"}}>
+                 <HistoryFlexWrap>
+                  <li><span><Inventory2Icon style={{color: "#7000f6"}}/></span> <button>History</button></li><WalletWrap><span>.</span></WalletWrap> 
+                 </HistoryFlexWrap>
+                </Link>
+                <Link to="/AfterFilling" style={{textDecoration: "none"}}>
+                 <li><button><AccountCircleTwoToneIcon /> Account</button></li>
+                </Link>
                 </List1>
 
                 <List2>
-                <li><button><LogoutIcon />  Logout</button></li>
-                <li><button><SupportAgentIcon/>  Contact</button></li>
+                  <li><button><LogoutIcon />  Logout</button></li>
+                  <Link to="/Help" style={{textDecoration: "none"}}>
+                    <li><button><SupportAgentIcon/>  Contact</button></li>
+                  </Link>
                 </List2>
                 <footer>spatch<img src="pop,logo.jpg" alt="icon"/></footer>
                 
                </Container3>
             </BurgerNav>
             <Content>
+            <Link to="/History" style={{textDecoration: "none"}}>
               <TopArrow><WestIcon/><span>History</span></TopArrow>
               <BtnTopText><h3>These are your order history<br/><h6>Confirm your current password</h6></h3> </BtnTopText>
+            </Link>
               <Table>
                 <Tr1><span><tr>20 August 2021, 12:32pm</tr><tr>Surulere,Lagos</tr></span>
                 <span><td>NGN 2,800.00</td><CardSpan>Card 4399<span><PanoramaFishEyeIcon fontSize="small"/></span></CardSpan></span></Tr1>
@@ -82,7 +94,9 @@ function History() {
                 </Grid1>
                 <CardSpan><img src="Spachbike3.jpg" alt="icon"/></CardSpan>
                 </Flex>
-                <Reciept><label>View reciept detail<TrendingFlatIcon fontSize="small" style={{marginTop: "3px", marginLeft: "2px"}}/></label><RemoveCircleOutlineIcon fontSize="small" style={{color: " #6E6E6E"}}/></Reciept>
+                <Link to="/History2" style={{textDecoration: "none"}}>
+                  <Reciept><label>View reciept detail<TrendingFlatIcon fontSize="small" style={{marginTop: "3px", marginLeft: "2px"}}/></label><RemoveCircleOutlineIcon fontSize="small" style={{color: " #6E6E6E"}}/></Reciept>
+                </Link>
               </Table>
               
               <RecieptHistory>
@@ -181,7 +195,7 @@ transform: ${props => props.show? 'translateY(0)': 'translateY(100%)'};
 const Container1 = styled.div`
 padding-left: 20px;
 background-color: #7000f6;
-height: 25vh;
+
 border: 1px solid #6001D1;
 padding-top: px;
 
@@ -190,11 +204,11 @@ padding-top: px;
 
 `
 const ProfileImg = styled.div`
-padding-top: 13px;
+padding-top: 10px;
 img {
   border-radius: 80px;
-  height: 5% ;
-  width: 20%; 
+  height: 40px ;
+  width: 40px;
 }
 `
 
@@ -212,7 +226,7 @@ padding-top: 3px;
 const Container2 = styled.div`
 padding-left: 20px;
 background-color: #6001D1;
-height: 10vh;
+
 border: 1px solid #6001D1;
 
 `
@@ -267,6 +281,9 @@ padding-top: 25px;
 }
 
 button {
+  border: none;
+  background-color: #f2f2f2;
+  font-weight: bold;
   text-decoration: none; 
   color: #6E6E6E;
 }
@@ -297,7 +314,10 @@ span{
 }
 
 button {
-    margin-left: 15px;
+  border: none;
+  background-color: #f2f2f2;
+  font-weight: bold;
+  margin-left: 15px;
 }
 
 `
@@ -307,11 +327,15 @@ font-weight: bold;
 border-bottom: 1px solid #6E6E6E;
 li {
    padding-top: 15px; 
-   
+   border: none;
+   background-color: #f2f2f2;
+   font-weight: bold;
    border-top: 1px solid #6E6E6E;
    padding-bottom: 15px;
    button {
-
+    border: none;
+    background-color: #f2f2f2;
+    font-weight: bold;
     text-decoration: none; 
     color: #6E6E6E;
     
@@ -319,6 +343,7 @@ li {
 }       
 `
 const CustomClose = styled(CloseIcon)`
+padding-top: 8px;
 color: white;
 `
 const TopIconWrap = styled.div`
@@ -399,6 +424,9 @@ span {
   display: flex;
  }
  button {
+  border: none;
+  background-color: white;
+  font-weight: bold;
   color: #FFB947;
   font-size: 15px;
   margin-left: 5px;
@@ -475,8 +503,10 @@ td {
 }
 
 button {
+  border: none;
+  background-color: white;
   color: red;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px; 
   padding-left: 5px;
 }

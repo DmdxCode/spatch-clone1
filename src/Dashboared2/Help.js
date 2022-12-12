@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import WalletIcon from '@mui/icons-material/Wallet';
@@ -62,15 +63,23 @@ function Help() {
             <Content>
             
             <MasterBox>
-                <span><h1>Help</h1><img src="cancle icon.png" alt="icon"/></span>
+                <span><h1>Help</h1>
+                <Link to="/Dashboard1" style={{textDecoration: "none", color: "black"}}>
+                 <img src="cancle icon.png" alt="icon"/>
+                </Link>
+                </span>
                 <h6>How can we be of help to you?</h6>
                 
                
                 <li>I can't order<ArrowForwardIosIcon fontSize="small" style={{color: "#6E6E6E"}}/></li>
                 <li>I can't add money to my wallet<ArrowForwardIosIcon fontSize="small" style={{color: "#6E6E6E"}}/></li>
                 <li>I can't add payment method<ArrowForwardIosIcon fontSize="small" style={{color: "#6E6E6E"}}/></li>
-                <li>My package was not delivered<ArrowForwardIosIcon fontSize="small" style={{color: "#6E6E6E"}}/></li>
-                <li>I want to delete my account<ArrowForwardIosIcon fontSize="small" style={{color: "#6E6E6E"}}/></li>
+                <Link to="/MyPackageWasNotDelivered" style={{textDecoration: "none", color: "black"}}>
+                 <li>My package was not delivered<ArrowForwardIosIcon fontSize="small" style={{color: "#6E6E6E"}}/></li>
+                </Link>
+                <Link to="/DeleteAccount" style={{textDecoration: "none", color: "black"}}>
+                 <li>I want to delete my account<ArrowForwardIosIcon fontSize="small" style={{color: "#6E6E6E"}}/></li>
+                </Link>
             </MasterBox>
             
             </Content> 

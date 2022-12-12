@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import WalletIcon from '@mui/icons-material/Wallet';
@@ -44,45 +45,63 @@ function RequestAsReceiver () {
               <Wrap>
                 <WalletBalance>N12,000</WalletBalance>
                 <Button1>
-                  <PlusIcon><img src="wallet add icon-modified.png" alt="add icon"/></PlusIcon>
-                  </Button1>
-
-                
+                  <PlusIcon>
+                    <img src="wallet add icon-modified.png" alt="add icon"/>
+                  </PlusIcon>  
+                </Button1>     
               </Wrap>
                </Container2>
-               <Container3>
-                <List1>
-                  <RequestWrap>
-                <li><button><ArrowOutwardIcon/>  Request </button></li><span>.</span></RequestWrap>
-                <li><button><WalletIcon />  Wallet</button></li>
-                <li><button><Inventory2Icon/> History</button></li>
-                <li><button><AccountCircleTwoToneIcon /> Account</button></li>
-                </List1>
 
-                <List2>
-                <li><button><LogoutIcon />  Logout</button></li>
-                <li><button><SupportAgentIcon/>  Contact</button></li>
-                </List2>
-                <footer>spatch<img src="pop,logo.jpg" alt="logo"/></footer>
-                
-               </Container3>
+                <Container3>
+                    <List1>             
+                      <Link to="/RequestAsSender2" style={{textDecoration: "none"}}>
+                        <RequestWrap>
+                          <li><button><ArrowOutwardIcon style={{color: "7000f6"}}/>  Request </button></li><span>.</span>
+                        </RequestWrap>
+                      </Link>
+                      <Link to="/Wallet" style={{textDecoration: "none"}}>
+                        <li><button><WalletIcon />  Wallet</button></li>
+                      </Link>
+                      <Link to="/History" style={{textDecoration: "none"}}>
+                        <li><button><Inventory2Icon/> History</button></li>
+                      </Link>
+                      <Link to="/AfterFilling" style={{textDecoration: "none"}}>
+                        <li><button><AccountCircleTwoToneIcon /> Account</button></li>
+                      </Link>
+                    </List1>
+
+                    <List2>
+                      <li><button><LogoutIcon />  Logout</button></li>
+                      <Link to="/Help" style={{textDecoration: "none"}}>
+                        <li><button><SupportAgentIcon/>  Contact</button></li>
+                      </Link>
+                    </List2>
+                     <footer>spatch<img src="pop,logo.jpg" alt="logo"/></footer>                
+                </Container3>
             </BurgerNav>
             <Content>
-            <Arrow><WestIcon/><span>Request</span></Arrow>
+            <Link to="/Dashboard1" style={{textDecoration: "none"}}>
+              <Arrow><WestIcon/><span>Request</span></Arrow>
+            </Link>
            <MasterBox>
             <BoxHead><span>Same Day</span><KeyboardArrowDownIcon fontSize="large"/></BoxHead>
             <MinBoxWrap>
-              <MinBox1><img src="icon (1).png"  alt="icon"/><span>sender</span></MinBox1>
+
+              <MinBox1>
+                <Link to="/Sameday" style={{textDecoration: "none"}}>
+                  <img src="icon (1).png"  alt="icon"/><span>sender</span>
+                </Link>
+              </MinBox1>
               <MinBox2><img src="icon (2).png" alt="icon"/><span>receiver</span></MinBox2>
               <MinBox3><img src="icon (3).png" alt="icon"/><span>guest</span></MinBox3>
             </MinBoxWrap>
             <Box1><span><img src="icon (5) unside.png" alt="icon"/>Adam Rewana Ikoyin Estate, Ikoyi</span><CloseIcon/></Box1>
 
             <Box2>
-            <span><H7><img src="yellow icon (1).png" alt="icon"/><button>3, Idumota Lane, Lagos Island</button></H7><CloseIcon/></span>
-            <span><H8><img src="yellow icon (2).png" alt="icon"/><button>Rasheed Aderanmisie</button></H8><CloseIcon/> </span>
-            <span><H9><img src="yellow icon (3).png" alt="icon"/><button><input type="number" id="number" placeholder="+234 | 809 000 4030"/></button></H9><CloseIcon/></span>
-            <span><H10><img src="icon (8).png" alt="icon"/><button>A new pair of adidas shoes</button></H10><CloseIcon/></span>
+              <span><H7><img src="yellow icon (1).png" alt="icon"/><button>3, Idumota Lane, Lagos Island</button></H7><CloseIcon/></span>
+              <span><H8><img src="yellow icon (2).png" alt="icon"/><button>Rasheed Aderanmisie</button></H8><CloseIcon/> </span>
+              <span><H9><img src="yellow icon (3).png" alt="icon"/><button><input type="number" id="number" placeholder="+234 | 809 000 4030"/></button></H9><CloseIcon/></span>
+              <span><H10><img src="icon (8).png" alt="icon"/><button>A new pair of adidas shoes</button></H10><CloseIcon/></span>
             </Box2>
             <Box3>
               <li><Icon1><MopedIcon/><button>Bike</button><BikePrice>N2,240</BikePrice></Icon1><Icon4><ExpandLessIcon/></Icon4></li>
@@ -264,6 +283,9 @@ padding-top: 15px;
 }
 
 button {
+  border: none;
+  background-color: bold;
+  font-weight: bold;
   text-decoration: none; 
   color: #6E6E6E;
 }
@@ -294,8 +316,11 @@ li {
    
    border-top: 1px solid #6E6E6E;
    padding-bottom: 15px;
-   button {
 
+  button {
+    border: none;
+    background-color: #f2f2f2;
+    font-weight: bold;
     text-decoration: none; 
     color: #6E6E6E;
     
@@ -474,7 +499,7 @@ span {
   list-style: none;
   color: #6E6E6E;
   display: flex;
-  font-weight: bold;
+  font-weight: 700;
   padding-top: 20px;
 }
 
@@ -484,7 +509,10 @@ margin-right: ;
 }
 
 button {
+  border: none;
+  background-color: white; 
   text-decoration: none;
+  font-weight: bold;
   color: black;
   display: flex;
   margin-left: 10px;
@@ -527,8 +555,10 @@ li {
 }
 
 button {
+  border: none;
+  background-color: white;
+  font-weight: 700;
   color: black;
-  font-weight: bold;
   margin-left: 10px;
 }
 

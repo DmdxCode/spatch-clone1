@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import WalletIcon from '@mui/icons-material/Wallet';
@@ -52,27 +53,36 @@ function History2() {
                </Container2>
                <Container3>
                 <List1>
-                  
-                <li><button><ArrowOutwardIcon/>  Request </button></li>
-               
+                <Link to="/RequestAsSender" style={{textDecoration: "none"}}>
+                  <li><button><ArrowOutwardIcon/>  Request </button></li>
+                </Link>
+                <Link to="/Wallet" style={{textDecoration: "none"}}>
                   <li><button><WalletIcon/> Wallet</button></li>
-                
-                <HistoryFlexWrap>
-                <li><span><Inventory2Icon/></span> <button>History</button></li><WalletWrap><span>.</span></WalletWrap> 
-                </HistoryFlexWrap>
-                <li><button><AccountCircleTwoToneIcon /> Account</button></li>
+                </Link>
+                <Link to="/History" style={{textDecoration: "none"}}>
+                  <HistoryFlexWrap>
+                    <li><span><Inventory2Icon style={{color: "#7000f6"}}/></span> <button>History</button></li><WalletWrap><span>.</span></WalletWrap> 
+                  </HistoryFlexWrap>
+                </Link>
+                <Link to="/AfterFilling" style={{textDecoration: "none"}}>
+                  <li><button><AccountCircleTwoToneIcon /> Account</button></li>
+                </Link>
                 </List1>
 
                 <List2>
-                <li><button><LogoutIcon />  Logout</button></li>
-                <li><button><SupportAgentIcon/>  Contact</button></li>
+                  <li><button><LogoutIcon />  Logout</button></li>
+                  <Link to="/Help" style={{textDecoration: "none"}}>
+                    <li><button><SupportAgentIcon/>  Contact</button></li>
+                  </Link>
                 </List2>
                 <footer>spatch<img src="pop,logo.jpg" alt="icon"/></footer>
                 
                </Container3>
             </BurgerNav>
             <Content>
-             <TopArrow><WestIcon/><span>#234ANMQ</span></TopArrow>
+            <Link to="/History" style={{textDecoration: "none"}}>
+                <TopArrow><WestIcon/><span>#234ANMQ</span></TopArrow>
+            </Link>
              <ContContainer1>
                 <img src="pop,logo.jpg" alt="logo"/>
                 <h5>Hi Fisayo,</h5>
@@ -135,8 +145,8 @@ const Container = styled.div`
   align-items: center;
   padding-top: 5vh; 
   overflow: hidden; 
-  padding-left: 200px;
-  padding-right: 200px; 
+  padding-left: 100px;
+  padding-right: 100px; 
 }
 
 
@@ -281,6 +291,9 @@ padding-top: 25px;
 }
 
 button {
+  border: none;
+  background-color: #f2f2f2;
+  font-weight: bold;
   text-decoration: none; 
   color: #6E6E6E;
 }
@@ -325,7 +338,9 @@ li {
    border-top: 1px solid #6E6E6E;
    padding-bottom: 15px;
   button {
-
+    border: none;
+    background-color: #f2f2f2;
+    font-weight: bold;
     text-decoration: none; 
     color: #6E6E6E;
     
@@ -408,6 +423,9 @@ span {
     display: flex;
    }
    button {
+    border: none;
+    background-color: white;
+    font-weight: bold;
     color: #FFB947;
     font-size: 15px;
     margin-left: 5px;

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import WestIcon from '@mui/icons-material/West'
 import EmailIcon from '@mui/icons-material/Email';
@@ -13,13 +14,17 @@ function ForgotPassword() {
           <Content>
           <Background></Background>           
             <Button5></Button5> 
-            <Arrow><WestIcon/></Arrow>
+            <Link to="/LoginEmail" style={{textDecoration: "none"}}>
+              <Arrow><WestIcon/></Arrow>
+            </Link>
                 <h2>Reset password.</h2>
-                <h4>Enter your email to receive a code to reset your password.</h4>
+                <h4>Enter your email to receive a <br/>code to reset your password.</h4>
             <LoginInput1>
             <EmailIconWrap><EmailIcon/></EmailIconWrap> <span> <input placeholder="Email" type="text" id="@" required/></span>
             </LoginInput1>
-            <Button>Continue to reset</Button>
+            <Link to="/PasswordVerification" style={{textDecoration: "none"}}>
+             <Button>Continue to reset</Button>
+            </Link>
             <footer>By continuing, you agree to our <button>Privacy Policy</button><br/>and our <button>Terms of Service</button></footer>
            </Content> 
 
@@ -34,6 +39,7 @@ export default ForgotPassword
 
 const Header = styled.div`
 background-color: #f2f2f2;
+padding-left: 10px;
 color: #7000f6;
 overflow: hidden;
 @media (min-max: 1000px) {
@@ -72,7 +78,7 @@ h2 {
 
 h4 {
     color: #6E6E6E;
-    font-size: 10px;
+    font-weight: 400;
 }
 
 footer{
@@ -82,6 +88,9 @@ footer{
    }
 
    button {
+    border: none;
+    background-color: #f2f2f2;
+    font-weight: bold;
     font-weight: bold;
     text-decoration: none;
     color: #7000F6;

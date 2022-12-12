@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import WestIcon from '@mui/icons-material/West'
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
@@ -15,7 +16,9 @@ function SignInNumber() {
     <Container>
       <Content>
         <Background></Background>
+        <Link to="/" style={{textDecoration: "none"}}>
           <Arrow><WestIcon/></Arrow>
+        </Link>
           <h1>Sign in to Spatch.</h1>
           <h7>please enter your sign in detail</h7>
           <LoginInput1>
@@ -29,7 +32,9 @@ function SignInNumber() {
             </LockIconWrap>
           </LogininInput2>
           <h6>Forgot password?</h6>
+          <Link to="/Dashboard2" style={{textDecoration: "none"}}>
           <Button>Sign in Spatch</Button>
+          </Link>
           <footer>By continuing, you agree to our <button>Privacy Policy</button><br/> and our <button>Terms of Service</button></footer>
       </Content>
     </Container>
@@ -44,6 +49,7 @@ font-weight: bold;
 background-color: #f2f2f2;
 color: #7000f6;
 overflow: hidden;
+padding-left: 10px;
 
      img {
         height: 22px;
@@ -86,6 +92,9 @@ background-color: #f2f2f2;
    }
 
    button {
+    border: none;
+    background-color: #f2f2f2;
+    color: #7000f6;
     font-weight: bold;
     text-decoration: none;
    }

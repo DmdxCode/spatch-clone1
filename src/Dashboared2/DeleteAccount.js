@@ -1,7 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
-
-
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 
 
@@ -14,8 +13,16 @@ function DeleteAccount() {
             <Content>
             
             <MasterBox>
-                <span><KeyboardBackspaceIcon fontSize="small" style={{paddingTop: "23px", color: "#7000f6"}}  /><h3>I want to delete my account</h3><img src="cancle icon.png" alt="icon"/></span>
-                <h6>If you can figure it out, you can contact support team.</h6>
+                <span>
+                  <Link to="/Help" style={{textDecoration: "none", color: "black"}}>
+                    <KeyboardBackspaceIcon fontSize="small" style={{paddingTop: "23px", color: "#7000f6"}}/>
+                  </Link>
+                  <h3>I want to delete my account</h3>
+                  <Link to="/Dashboard1" style={{textDecoration: "none", color: "black"}}>
+                    <img src="cancle icon.png" alt="icon"/>
+                  </Link>
+                </span>
+                <h6 style={{color: "#6E6E6E"}}>If you can figure it out, you can contact support team.</h6>
             <Text>
             <h8> We re so sorry to say goodbye! But of course we respect your decision and thats 
 why you can unsubscribe whenever you want. We will delete all your personal data, 

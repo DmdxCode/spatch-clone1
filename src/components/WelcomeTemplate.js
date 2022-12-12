@@ -54,8 +54,8 @@ const MasterContainer = styled.div`
   align-items: center;
 
   overflow: hidden; 
-  padding-left: 200px;
-  padding-right: 200px; 
+  padding-left: 100px;
+  padding-right: 100px; 
 }
 
 overflow: hidden;

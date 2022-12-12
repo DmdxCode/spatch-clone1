@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import WestIcon from '@mui/icons-material/West';
 import PersonIcon from '@mui/icons-material/Person';
@@ -17,7 +18,9 @@ function RegistrationForm() {
     <Container>
       <Background></Background>
       <Content>
+      <Link to="/" style={{textDecoration: "none"}}>
         <Arrow><WestIcon/></Arrow>
+      </Link>
         <h2>Register with Spatch</h2>
         <span>Continue creating account with</span>
         <h6>usmanjaguar@gmail.com</h6>
@@ -32,7 +35,9 @@ function RegistrationForm() {
                   <li><input placeholder='+234' name="First Name" type="text"></input></li>
                   <li><input placeholder='803 600 1234' type="text" name="Last Name"></input></li>
         </NameWrap>
-        <Button type="submit">Create account</Button>
+        <Link to="/PhoneVerification" style={{textDecoration: "none"}}>
+          <Button type="submit">Create account</Button>
+        </Link>
         <footer>By continuing, you agree to our <button>Privacy Policy</button> and our <button>Terms of Service</button></footer>
     </Content>
     </Container>
@@ -76,6 +81,8 @@ footer{
  }
 
  button {
+  border: none;
+  background-color: #f2f2f2;
   font-weight: bold;
   text-decoration: none;
   color: #7000f6;
@@ -112,6 +119,7 @@ z-index: -1;
 `
 
 const Header = styled.div`
+padding-left: 10px; 
 background-color: #f2f2f2;
 overflow: hidden;
 color: #7000f6;
@@ -130,6 +138,7 @@ color: #7000f6;
 const Arrow = styled.div`
 color: #7000F6;
 cursor: pointer;
+margin-bottom: 10px;
 `
 const LoginInput1 = styled.div`
 border-bottom: 2px solid #7000F6;

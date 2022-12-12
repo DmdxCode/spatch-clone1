@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import WalletIcon from '@mui/icons-material/Wallet';
@@ -49,16 +50,25 @@ function AfterFilling() {
                </Container2>
                <Container3>
                 <List1>
-                  
-                <li><button><ArrowOutwardIcon/>  Request </button></li>
-                <li><button><WalletIcon />  Wallet</button></li>
-                <li><button><Inventory2Icon/> History</button></li>
-                <RequestWrap><li><button><AccountCircleTwoToneIcon style={{color: "#7000f6"}} /> Account</button></li><span>.</span></RequestWrap>
+                <Link to="/RequestAsSender" style={{textDecoration: "none"}}>
+                  <li><button><ArrowOutwardIcon/>  Request </button></li>
+                </Link>
+                <Link to="/Wallet" style={{textDecoration: "none"}}>
+                  <li><button><WalletIcon />  Wallet</button></li>
+                </Link>
+                <Link to="/History" style={{textDecoration: "none"}}>
+                  <li><button><Inventory2Icon/> History</button></li>
+                </Link>
+                <Link to="/AfterFilling" style={{textDecoration: "none"}}>
+                  <RequestWrap><li><button><AccountCircleTwoToneIcon style={{color: "#7000f6"}} /> Account</button></li><span>.</span></RequestWrap>
+                </Link>
                 </List1>
 
                 <List2>
-                <li><button><LogoutIcon />  Logout</button></li>
-                <li><button><SupportAgentIcon />  Contact</button></li>
+                  <li><button><LogoutIcon />  Logout</button></li>
+                  <Link to="/Help" style={{textDecoration: "none"}}>
+                    <li><button><SupportAgentIcon/>  Contact</button></li>
+                  </Link>
                 </List2>
                 <footer>spatch<img src="pop,logo.jpg" alt="logo"/></footer>
                 
@@ -80,9 +90,11 @@ function AfterFilling() {
                 <EmailWrap>
                 <span><H8><input placeholder='Email' name="Email" type="@"></input></H8><EmailIcon/></span>
                 </EmailWrap>
-                <Password>
-                  <span><H8><input placeholder='Change Password' name="password" type="password" /></H8><LockIcon/></span>
-                </Password>
+                <Link to="/NewPassword" style={{textDecoration: "none"}}>
+                  <Password>
+                    <span><H8><input placeholder='Change Password' name="password" type="password" /></H8><LockIcon/></span>
+                  </Password>
+                </Link>
                 <h1>Loyalty Program</h1>
                 <h6>if you have a loyalty add the code</h6>
                 <Code>
@@ -245,6 +257,9 @@ padding-top: 10px;
 }
 
 button {
+  border: none;
+  background-color: #f2f2f2;
+  font-weight: bold;
   text-decoration: none; 
   color: #6E6E6E;
 }
@@ -276,7 +291,9 @@ li {
    padding-bottom: 10px;
 
   button {
-
+    border: none;
+    background-color: #f2f2f2;
+    font-weight: bold;
     text-decoration: none; 
     color: #6E6E6E;
     
@@ -433,6 +450,8 @@ list-style: none;
 display: flex;
 justify-content: space-between;
 align-items: center;
+padding-left: 10px;
+padding-right: 10px;
 height: 50px;
 
 }

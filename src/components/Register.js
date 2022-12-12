@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom';
 import WestIcon from '@mui/icons-material/West'
 import EmailIcon from '@mui/icons-material/Email';
 
@@ -17,7 +18,9 @@ function Register() {
         <LoginInput1>
               <EmailIconWrap><EmailIcon/></EmailIconWrap> <span> <input placeholder="Email" type="text" id="@" required/></span>
         </LoginInput1>
-        <Button>Continue</Button>
+        <Link to="/EmailVerification" style={{textDecoration: "none"}}>
+          <Button>Continue</Button>
+        </Link>
         <footer>By continuing, you agree to our <button>Privacy Policy</button> and our <button>Terms of Service</button></footer>
       </Content>
     </Container>
@@ -36,6 +39,7 @@ overflow: hidden;
 const Header = styled.div`
 margin-top: 0px;
 font-weight: bold;
+padding-left: 10px;
 color: #7000f6;
   
      img {
@@ -74,6 +78,9 @@ background-color: #f2f2f2;
    }
 
    button {
+    border: none;
+    background-color: f2f2f2;
+    color: #7000f6;
     font-weight: bold;
     text-decoration: none;
    }

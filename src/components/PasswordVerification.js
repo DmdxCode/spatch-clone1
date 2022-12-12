@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import LockIcon from '@mui/icons-material/Lock';
 function PasswordVerification() {
@@ -10,16 +11,16 @@ function PasswordVerification() {
     <Container>
       <Background></Background>
       <Content>
-    <Button5></Button5> 
       <h2>Verification.</h2>
       <h6>We've sent a verication code to your detail:<br/>
-      <h3>(234) 809 900 1234</h3>
+      <h3>(234) 809 900 1234 or usmanjaguar@gmail.com</h3>
       </h6>
       <CodeInput>
         <IconWrap><LockIcon/></IconWrap><input type='number' placeholder='Enter code'/>
       </CodeInput>
-
-      <Button>Confirm</Button>
+      <Link to="/CreateNewPassword" style={{textDecoration: "none"}}>
+        <Button>Confirm</Button>
+      </Link>
             <Text>Didn't get the mail?</Text>
 
             <Text2>Verify that your email address is correct,<br/>or check your spam folder.</Text2>
@@ -42,6 +43,7 @@ export default PasswordVerification
 
 const Header = styled.div`
 background-color: #f2f2f2;
+padding-left: 10px;
 overflow: hidden;
 color: #7000f6;
 @media (min-max: 1000px) {
@@ -78,6 +80,7 @@ h2 {
     font-size: 30px;
 }
 h6 {
+  font-weight: 400;
   color: #6E6E6E 
 }
 `
@@ -182,7 +185,4 @@ color: #7000F6;
 font-weight: bold;
 cursor: pointer;
 
-`
-const Button5 = styled.div`
-height: 80px;
 `
