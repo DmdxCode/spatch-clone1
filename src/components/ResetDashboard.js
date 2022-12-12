@@ -9,7 +9,7 @@ function ResetDashboard() {
     <>
     <Header>
       <h1>spatch<img src="pop,logo.jpg"  alt="logo"/></h1>
-      <Link to="/Dashboard1" style={{textDecoration: "none", color: "white"}}>
+      <Link to="/Dashboard2" style={{textDecoration: "none", color: "white"}}>
        <ArrowForwardIosIcon fontSize='large' style={{color: "color", paddingRight: "20px", marginTop: "20px", cursor: "pointer"}}/>
       </Link>
     </Header>
