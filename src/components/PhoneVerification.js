@@ -26,8 +26,9 @@ function PhoneVerification() {
                 <Text2>Verify that your email address is correct,<br/>or check your spam folder.</Text2>
 
                 <Button2>Resend code</Button2>
-
-                <Text3>Or RESTART</Text3>
+                <Link to="/Register" style={{textDecoration: "none"}}>
+                  <Text3>Or RESTART</Text3>
+                </Link>
             </Content>
         </Container>
     </>

@@ -16,11 +16,11 @@ function CreateNewPassword() {
         <h1>Create new password.</h1>
         <h7>Set your new password and keep it safe.</h7>
         <LoginInput1>
-        <LockIconWrap><LockIcon/></LockIconWrap><span> <input placeholder="New password" type="@" id="email" required/></span>
+        <LockIconWrap><LockIcon/></LockIconWrap><span> <input placeholder="New password" type="password" id="email" required/></span>
         </LoginInput1>
 
         <LogininInput2>
-           <LockIconWrap><LockIcon/></LockIconWrap> <span><input placeholder="Confirm password" type="number text" id="password" required/></span>
+           <LockIconWrap><LockIcon/></LockIconWrap> <span><input placeholder="Confirm password" type="password" id="password" required/></span>
         </LogininInput2>
         <Link to="/ResetDashboard" style={{textDecoration: "none"}}>
          <Button>Continue</Button>

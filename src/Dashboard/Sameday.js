@@ -98,7 +98,7 @@ function Sameday() {
             <Box1><span><img src="icon (4).png" alt="icon"/>Adam Rewana Ikoyin Estate, Ikoyi</span><CloseIcon/></Box1>
 
             <Box2>
-            <span><H7><img src="icon (5).png" alt="icon"/><button>Where are we delivering to?</button></H7><GpsNotFixedOutlinedIcon/></span>
+            <span><H7><img src="icon (5).png" alt="icon"/><button><input placeholder='Where are we delivering to?'/></button></H7><GpsNotFixedOutlinedIcon/></span>
             <span><H8><img src="icon (6).png" alt="icon"/><button>Rasheed Aderanmisie</button></H8><CloseIcon/> </span>
             <span><H9><img src="icon (7).png" alt="icon"/><button><input type="number" id="number" placeholder="+234 | 809 000 4030"/></button></H9><CloseIcon/></span>
             <span><H10><img src="icon (8).png" alt="icon"/><button>A new pair of adidas shoes</button></H10><CloseIcon/></span>
@@ -523,6 +523,10 @@ const H7 = styled.div`
   display: flex;
   button {
     color: #6E6E6E;
+  }
+  input {
+    font-weight: 200;
+    width: 250px;
   }
 `
 const  H8 = styled.div`

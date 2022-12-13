@@ -16,6 +16,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 function AfterFilling() {
     const [burgerStatus, setburgerStatus] = useState(false);
+
   return (
     <>
     <TopIconWrap>
@@ -92,7 +93,7 @@ function AfterFilling() {
                 </EmailWrap>
                 <Link to="/NewPassword" style={{textDecoration: "none"}}>
                   <Password>
-                    <span><H8><input placeholder='Change Password' name="password" type="password" /></H8><LockIcon/></span>
+                    <span><H8><input placeholder='Change Password' type="password"/></H8><LockIcon/></span>
                   </Password>
                 </Link>
                 <h1>Loyalty Program</h1>

@@ -18,6 +18,14 @@ import Visibility from '@mui/icons-material/Visibility';
 
 function NewPassword() {
     const [burgerStatus, setburgerStatus] = useState(false);
+    const [showPassword, setShowPassword] = useState(false);
+    const togglePassword = () => {
+      setShowPassword(!showPassword);
+    }
+    const [showPassword2, setShowPassword2] = useState(false);
+    const togglePassword2 = () => {
+      setShowPassword2(!showPassword2);
+    }
   return (
     <>
     <TopIconWrap>
@@ -89,10 +97,10 @@ function NewPassword() {
                 <h1>New Password</h1>
                 <h6>Provide the new password</h6>
                 <Code>
-                  <li><input placeholder='New Password' type="password" name="current password" /><Visibility/></li>
+                  <li><input placeholder='New Password' type={showPassword ? "text" : "password"} /><Visibility onClick={togglePassword}/></li>
                 </Code>
                 <Code>
-                  <li><input placeholder='Current New Password' type="password" name="current new password" /><Visibility/></li>
+                  <li><input placeholder='Current New Password' type={showPassword2 ? "text" : "password"} /><Visibility onClick={togglePassword2}/></li>
                 </Code>
                 <Link to="/AfterFilling" style={{textDecoration: "none"}}>
                   <SubmitBtn>

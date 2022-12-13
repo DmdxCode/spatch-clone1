@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import WestIcon from '@mui/icons-material/West';
 import PersonIcon from '@mui/icons-material/Person';
 import LockIcon from '@mui/icons-material/Lock';
-import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
+import Visibility from '@mui/icons-material/Visibility';
 import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
 
 function RegistrationForm() {
-  
-  
+   const [showPassword, setShowPassword] = useState(false);
+   const togglePassword = () => {
+ setShowPassword (!showPassword);
+   }
+   const [value, setValue] = useState()
   return (
     <>
     <Header>
@@ -29,11 +33,13 @@ function RegistrationForm() {
             <PersonIconWrap><PersonIcon/></PersonIconWrap><input placeholder='Usman Jaguar'/>
         </LoginInput1>
         <LoginInput2>
-            <LockIconWrap><VisibilityIconWrap><LockIcon /><input placeholder='Password'/></VisibilityIconWrap><VisibilityOffIcon /></LockIconWrap>
+            <LockIconWrap><VisibilityIconWrap><LockIcon /><input type={showPassword ? "text" : "password"} placeholder='Password'/></VisibilityIconWrap><Visibility onClick={togglePassword}/></LockIconWrap>
         </LoginInput2>
-        <NameWrap>
-                  <li><input placeholder='+234' name="First Name" type="text"></input></li>
-                  <li><input placeholder='803 600 1234' type="text" name="Last Name"></input></li>
+        <NameWrap> 
+          <PhoneInput
+            country="+234"
+            value={value}
+            onChange={setValue} placeholder="+234 903453267" style={{borderBottom: "2px solid #7000f6", width: "365px", paddingBottom: "15px"}}/>
         </NameWrap>
         <Link to="/PhoneVerification" style={{textDecoration: "none"}}>
           <Button type="submit">Create account</Button>
@@ -226,7 +232,10 @@ li {
 }
 
 input {
-  -webkit-appearance: none;
+      -webkit-outer-spin-button,
+      -webkit-inner-spin-button 
+      -webkit-appearance: none;
+
     outline: none;
     decoration: none;
     border: none;

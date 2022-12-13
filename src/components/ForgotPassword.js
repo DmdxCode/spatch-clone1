@@ -20,7 +20,7 @@ function ForgotPassword() {
                 <h2>Reset password.</h2>
                 <h4>Enter your email to receive a <br/>code to reset your password.</h4>
             <LoginInput1>
-            <EmailIconWrap><EmailIcon/></EmailIconWrap> <span> <input placeholder="Email" type="text" id="@" required/></span>
+            <EmailIconWrap><EmailIcon/></EmailIconWrap> <span> <input placeholder="Email" type="@" id="@" required/></span>
             </LoginInput1>
             <Link to="/PasswordVerification" style={{textDecoration: "none"}}>
              <Button>Continue to reset</Button>

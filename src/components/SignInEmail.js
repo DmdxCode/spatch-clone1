@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 import WestIcon from '@mui/icons-material/West'
@@ -8,6 +8,10 @@ import VisibilityIcon from '@mui/icons-material/Visibility';
 
 
 function SignInEmail() {
+  const [showPassword, setShowPassword] = useState(false);
+  const togglePassword = () => {
+setShowPassword (!showPassword);
+  }
   return (
     <Body>
     <Header>
@@ -23,13 +27,13 @@ function SignInEmail() {
         <h1>Sign in to Spatch.</h1>
         <h7>please enter your sign in detail</h7>
         <LoginInput1>
-          <EmailIconWrap><EmailIcon/></EmailIconWrap> <span> <input placeholder="Email" type="text" id="@" required/></span>
+          <EmailIconWrap><EmailIcon/></EmailIconWrap> <span> <input placeholder="Email" type="@" id="@" required/></span>
         </LoginInput1>
 
         <LogininInput2>
            <LockIconWrap>
-              <EyeIcon><LockIcon/><input placeholder="Password" type="number text" id="password" required/></EyeIcon>
-              <VisibilityIcon />
+              <EyeIcon><LockIcon/><input placeholder="Password" type={showPassword ? "text" : "password"} required/></EyeIcon>
+              <VisibilityIcon onClick={togglePassword}/>
            </LockIconWrap>
         </LogininInput2>
         <Link to="/ForgotPassword" style={{textDecoration: "none"}}>

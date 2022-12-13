@@ -109,8 +109,8 @@ const Container = styled.div`
   align-items: center;
   padding-top: 5vh; 
   overflow: hidden; 
-  padding-left: 200px;
-  padding-right: 200px; 
+  padding-left: 450px;
+  padding-right: 0px; 
 }
 
 

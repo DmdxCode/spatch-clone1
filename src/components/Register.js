@@ -16,7 +16,7 @@ function Register() {
         <h1>Register with Spatch.</h1>
         <h7>Enter your email to create an account</h7>
         <LoginInput1>
-              <EmailIconWrap><EmailIcon/></EmailIconWrap> <span> <input placeholder="Email" type="text" id="@" required/></span>
+              <EmailIconWrap><EmailIcon/></EmailIconWrap> <span> <input placeholder="Email" type="email" id="@" required/></span>
         </LoginInput1>
         <Link to="/EmailVerification" style={{textDecoration: "none"}}>
           <Button>Continue</Button>
