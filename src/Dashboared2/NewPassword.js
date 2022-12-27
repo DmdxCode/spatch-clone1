@@ -29,7 +29,12 @@ function NewPassword() {
   return (
     <>
     <TopIconWrap>
-        <Mi onClick={() => setburgerStatus(true)}><MenuIcon fontSize='large'/></Mi><WarningIcon><ErrorOutlineRoundedIcon fontSize="large"/></WarningIcon>
+        <Mi onClick={() => setburgerStatus(true)}><MenuIcon fontSize='large'/></Mi>
+        <WarningIcon>
+          <Link to="/Help" style={{textDecoration: "none"}} >
+            <ErrorOutlineRoundedIcon fontSize="large" style={{color: "7000f6"}}/>
+          </Link>
+        </WarningIcon>
           </TopIconWrap>
         <Container>
             
@@ -85,30 +90,32 @@ function NewPassword() {
                </Container3>
             </BurgerNav>
             <Content>
-            <Arrow><WestIcon/><span>Account</span></Arrow>
-            <MasterBox>
-                <h1>Current Password</h1>
-                <h6>Create your current password</h6>
+              <Link to="/AfterFilling" style={{textDecoration: "none"}} >
+                <Arrow><WestIcon/><span>Account</span></Arrow>
+              </Link>
+              <MasterBox>
+                  <h1>Current Password</h1>
+                  <h6>Create your current password</h6>
+                  
                 
-               
-                <Password>
-                  <li><input placeholder='Current Password' name="password" type="password" /><LockIcon/></li>
-                </Password>
-                <h1>New Password</h1>
-                <h6>Provide the new password</h6>
-                <Code>
-                  <li><input placeholder='New Password' type={showPassword ? "text" : "password"} /><Visibility onClick={togglePassword}/></li>
-                </Code>
-                <Code>
-                  <li><input placeholder='Current New Password' type={showPassword2 ? "text" : "password"} /><Visibility onClick={togglePassword2}/></li>
-                </Code>
-                <Link to="/AfterFilling" style={{textDecoration: "none"}}>
-                  <SubmitBtn>
-                    <submit>Save Changes</submit>
-                  </SubmitBtn>
-                </Link>
-            </MasterBox>
-            <BottomAddIcon><img src="add icon img-modified (1).png" alt="icon"/></BottomAddIcon>
+                  <Password>
+                    <li><input placeholder='Current Password' name="password" type="password" /><LockIcon/></li>
+                  </Password>
+                  <h1>New Password</h1>
+                  <h6>Provide the new password</h6>
+                  <Code>
+                    <li><input placeholder='New Password' type={showPassword ? "text" : "password"} required/><Visibility onClick={togglePassword}/></li>
+                  </Code>
+                  <Code>
+                    <li><input placeholder='Current New Password' type={showPassword2 ? "text" : "password"} required/><Visibility onClick={togglePassword2}/></li>
+                  </Code>
+                  <Link to="/AfterFilling" style={{textDecoration: "none"}}>
+                    <SubmitBtn>
+                      <submit>Save Changes</submit>
+                    </SubmitBtn>
+                  </Link>
+              </MasterBox>
+              <BottomAddIcon><img src="add icon img-modified (1).png" alt="icon"/></BottomAddIcon>
             </Content> 
 
         </Container>
@@ -132,8 +139,8 @@ const Container = styled.div`
 }
 
 
-padding-left: 30px;
-padding-right: 30px;
+padding-left: 10px;
+padding-right: 10px;
 padding-top: 0px;
 padding-bottom: 0px;
 

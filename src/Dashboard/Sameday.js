@@ -18,20 +18,116 @@ import PaymentsIcon from '@mui/icons-material/Payments';
 import SmsIcon from '@mui/icons-material/Sms';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
+import CurrencyInput from 'react-currency-input-field';
+
 function Sameday() {
     const [burgerStatus, setburgerStatus] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+    const toggling = () => {
+      setIsOpen(!isOpen);
+    };
+    const [selectedOption, setSelectedOption] = useState(null);
+    const onOptionClicked = value => () => {
+      setSelectedOption(value);
+      setIsOpen(false);
+      console.log(selectedOption);
+    };
+    
+    const options = [
+      
+      "Bike . ₦1,250",
+    ]
+    const options2 = [
+      "Van . ₦4,350",
+          ]
+    const [isOpen2, setIsOpen2] = useState(false);
+    const toggling2 = () => {
+      setIsOpen2(!isOpen2);
+    };
+
+    const [inputValue, setInputValue] = useState();
+
+    let onChange = (event) => {
+     const newValue = event.target.value;
+     setInputValue(newValue);
+    };
+ 
+const [isOpen3, setIsOpen3] = useState(false);
+const toggling3 = () => {
+  setIsOpen3(!isOpen3);
+}
+
+const [amount, setAmount] = useState();
+
+ let onChange2 = (event) => {
+  const newAmount = event.target.value;
+  setAmount(newAmount);
+}
+
+const [cancle1, setCancle1] = useState('');
+
+const toggleCancle1 = event => {
+setCancle1(event.target.value);
+};
+
+const toggleHandle = () => {
+  setCancle1('');
+};
+
+const [cancle2, setCancle2] = useState('');
+
+const toggleCancle2 = event => {
+setCancle2(event.target.value);
+};
+
+const toggleHandle2 = () => {
+  setCancle2('');
+};
+
+const [cancle3, setCancle3] = useState('');
+
+const toggleCancle3 = event => {
+setCancle3(event.target.value);
+};
+
+const toggleHandle3 = () => {
+  setCancle3('');
+};
+
+const [cancle4, setCancle4] = useState('');
+
+const toggleCancle4 = event => {
+setCancle4(event.target.value);
+};
+
+const toggleHandle4 = () => {
+  setCancle4('');
+};
+
+const [cancle5, setCancle5] = useState('');
+
+const toggleCancle5 = event => {
+setCancle5(event.target.value);
+};
+
+const toggleHandle5 = () => {
+  setCancle5('');
+};
   return (
     <>
     <TopIconWrap>
-        <Mi onClick={() => setburgerStatus(true)}><MenuIcon fontSize='large'/></Mi><WarningIcon><ErrorOutlineRoundedIcon fontSize="large"/></WarningIcon>
-          </TopIconWrap>
+        <Mi onClick={() => setburgerStatus(true)}><MenuIcon fontSize='large'/></Mi>
+        <WarningIcon>
+          <Link to="/Help" style={{textDecoration: "none"}} >
+            <ErrorOutlineRoundedIcon fontSize="large" style={{color: "7000f6"}}/>
+          </Link>
+        </WarningIcon>
+    </TopIconWrap>
         <Container>
-            <BackgroundImg><img src="Spatchmap.jpg" alt="background"/></BackgroundImg>
+          <BackgroundImg><img src="Spatchmap.jpg" alt="background"/></BackgroundImg>
 
             <BurgerNav show={burgerStatus}>
-           
-              
-               <Container1> 
+              <Container1> 
                 <CustomClose onClick={() => setburgerStatus(false)}/>
                 <ul key={burgerStatus.id}></ul>
                 <ProfileImg>
@@ -39,27 +135,27 @@ function Sameday() {
                 </ProfileImg>
                 <Text1>Elijah Solomon</Text1>
                 <Text2>View Profile</Text2>
-               </Container1>
+              </Container1>
 
-               <Container2>
+              <Container2>
                 <BalanceText>Wallet Balance</BalanceText>
-              <Wrap>
-                <WalletBalance>N12,000</WalletBalance>
-                <Button1>
-                  <PlusIcon><img src="wallet add icon-modified.png" alt="add icon"/></PlusIcon>
-                  </Button1>
-
-                
-              </Wrap>
-               </Container2>
-               <Container3>
+                <Wrap>
+                  <WalletBalance>₦12,000</WalletBalance>
+                  <Button1>
+                    <PlusIcon><img src="wallet add icon-modified.png" alt="add icon"/></PlusIcon>
+                  </Button1> 
+                </Wrap>
+              </Container2>
+              <Container3>
                 <List1>
-                  <Link to="/Dashboard2" style={{textDecoration: "none"}}>
+                  <Link to="/Dashboard2" style={{textDecoration: "none", display: "flex"}}>
                     <RequestWrap>
-                      <li><button ><ArrowOutwardIcon style={{color: "#7000f6"}}/>  Request </button></li><span>.</span>
+                      <li>
+                        <button><ArrowOutwardIcon style={{color: "#7000f6"}}/>  Request </button>
+                      </li><span>.</span>
                     </RequestWrap>
                   </Link>
-                  <Link to="/Wallet" style={{textDecoration: "none"}}>
+                  <Link to="/Wallet" style={{textDecoration: "none", display: "flex"}}>
                     <li><button ><WalletIcon />  Wallet</button></li>
                   </Link>
                   <Link to="/History" style={{textDecoration: "none"}}>
@@ -71,14 +167,16 @@ function Sameday() {
                 </List1>
 
                 <List2>
-                  <li><button><LogoutIcon />  Logout</button></li>
-                <Link to="/Help" style={{textDecoration: "none"}}>
-                  <li><button><SupportAgentIcon/>  Contact</button></li>
-                </Link>                
+                  <Link to="/" style={{textDecoration: "none"}}>
+                    <li><button><LogoutIcon />  Logout</button></li>
+                  </Link>                
+                  <Link to="/Help" style={{textDecoration: "none"}}>
+                    <li><button><SupportAgentIcon/>  Contact</button></li>
+                  </Link>                
                 </List2>
                 <footer>spatch<img src="pop,logo.jpg" alt="logo"/></footer>
                 
-               </Container3>
+              </Container3>
             </BurgerNav>
             <Content>
             <Link to="/Dashboard2" style={{textDecoration: "none"}}>
@@ -89,31 +187,163 @@ function Sameday() {
             <MinBoxWrap>
               <MinBox1><img src="icon (1).png" alt="icon"/><span>sender</span></MinBox1>
               <MinBox2>
-              <Link to="/RequestAsReceiver" style={{textDecoration: "none"}}>
+              <Link to="/RequestAsReceiver" style={{textDecoration: "none", display: "flex"}}>
                   <img src="icon (2).png" alt="icon"/><span>receiver</span>
               </Link>
               </MinBox2>
-              <MinBox3><img src="icon (3).png" alt="icon"/><span>guest</span></MinBox3>
+              <MinBox3>
+                <Link to="/Guest" style={{textDecoration: "none", display: "flex"}}>
+                  <img src="icon (3).png" alt="icon"/><span>guest</span>
+                </Link>
+              </MinBox3>
             </MinBoxWrap>
-            <Box1><span><img src="icon (4).png" alt="icon"/>Adam Rewana Ikoyin Estate, Ikoyi</span><CloseIcon/></Box1>
-
+            <Box1>
+              <span>
+                <img src="icon (4).png" alt="icon"/>
+                <button style={{border: "none", backgroundColor: "white"}}>
+                  <input value={cancle1} onChange={toggleCancle1} placeholder= "Pick from..." 
+                  style={{width: "180px", textOverflow : "ellipsis", overflow: "hidden", display: "inline-block", whiteSpace: "nowrap", border: "none", WebkitAppearance: "none", outline: "none",decoration: "none", fontWeight: "bold", fontSize: "15px"}} />
+                </button>
+              </span>
+              {cancle1?
+                 <CloseIcon onClick={toggleHandle}/>
+                 : ""
+                }            
+            </Box1>
             <Box2>
-            <span><H7><img src="icon (5).png" alt="icon"/><button><input placeholder='Where are we delivering to?'/></button></H7><GpsNotFixedOutlinedIcon/></span>
-            <span><H8><img src="icon (6).png" alt="icon"/><button>Rasheed Aderanmisie</button></H8><CloseIcon/> </span>
-            <span><H9><img src="icon (7).png" alt="icon"/><button><input type="number" id="number" placeholder="+234 | 809 000 4030"/></button></H9><CloseIcon/></span>
-            <span><H10><img src="icon (8).png" alt="icon"/><button>A new pair of adidas shoes</button></H10><CloseIcon/></span>
+              <span>
+                <H7><img src="icon (5).png" alt="icon"/>
+                  <button> 
+                    <input value={cancle2} onChange={toggleCancle2} type="text" placeholder={ 'Where are we delivering to?' } style={{width: "200px", textOverflow : "ellipsis", overflow: "hidden", display: "inline-block", whiteSpace: "nowrap", fontWeight: "bold", fontSize: "15px" }} />
+                  </button>
+                </H7>
+                {cancle2?
+                 <CloseIcon onClick={toggleHandle2}/>
+                 : <GpsNotFixedOutlinedIcon onClick={toggleHandle2}/>
+                }
+              </span>
+              <span>
+                <H8><img src="icon (6).png" alt="icon"/>
+                  <button>
+                    <input value={cancle3} onChange={toggleCancle3} placeholder= "Receiver's name" style={{width: "180px", textOverflow : "ellipsis", overflow: "hidden", display: "inline-block", whiteSpace: "nowrap", fontWeight: "bold", fontSize: "15px"}} required/>
+                  </button>
+                </H8>
+                {cancle3?
+                 <CloseIcon onClick={toggleHandle3}/>
+                 : ""
+                }
+              </span>
+              <span>
+                <H9><img src="icon (7).png" alt="icon"/>
+                  <button>
+                    <input value={cancle4} onChange={toggleCancle4} type="number" id="number" placeholder="+234 | 809 000 4030" input require="+234" />
+                  </button>
+                </H9>
+                {cancle4?
+                 <CloseIcon onClick={toggleHandle4}/>
+                 : ""
+                }              </span>
+              <span>
+                <H10><img src="icon (8).png" alt="icon"/>
+                  <button>
+                    <input value={cancle5} onChange={toggleCancle5} placeholder="Describe item" style={{width: "180px", textOverflow : "ellipsis", overflow: "hidden", display: "inline-block", whiteSpace: "nowrap", fontWeight: "bold", fontSize: "15px" }}/>
+                  </button>
+                </H10>
+                {cancle5?
+                 <CloseIcon onClick={toggleHandle5}/>
+                 : ""
+                }              
+              </span>
             </Box2>
             <Box3>
-              <li><Icon1><MopedIcon/><span>Select Vehicle Category</span></Icon1><Icon4><ExpandMoreIcon/></Icon4></li>
-              <li><Icon2><SmsIcon/><span>Leave a note</span></Icon2><Icon6><ExpandMoreIcon/></Icon6></li>
-              <li><Icon3><PaymentsIcon/><span>Receive cash for me</span></Icon3><Icon5><ExpandMoreIcon/></Icon5></li>
+              <DropDownContainer1>
+                <><DropDownHeader1 onClick={toggling}>
+                  <li><Icon1><MopedIcon/><span  style={{fontWeight: "500", color: "black"}}>{ selectedOption || "Select Vehicle Category"}</span></Icon1><Icon4><ExpandMoreIcon/></Icon4></li>
+
+                </DropDownHeader1></>
+                { isOpen && (
+                  <DropDownListContainer1>
+                    <DropDownList1>
+                        {
+                          options.map( vehicle => {
+                            return (                          
+                              <ListItem1 key={ vehicle } onClick={onOptionClicked(vehicle)}>
+                                <li><img src="Spachbike3.jpg" alt="" /><span>₦1,250</span>
+                                
+                                </li>
+                              </ListItem1>                     
+                            )
+                          }) 
+                        }
+                        {
+                          options2.map( vehicle => {
+                            return (                          
+                              <ListItem2 key={ vehicle } onClick={onOptionClicked(vehicle)}>
+                                <li><img src="Spatchvan.jpg" alt=""/><span>₦4,350</span></li>
+                              </ListItem2>                     
+                            )
+                          }) 
+                        }
+                      
+                      
+                    </DropDownList1>
+                  </DropDownListContainer1>
+                )}
+              </DropDownContainer1>
+
+              <DropDownContainer2 > 
+                <DropDownList2>      
+                  <li>
+                    <Icon2>
+                      <SmsIcon/>
+                      <span style={{width: "180px", textOverflow : "ellipsis", overflow: "hidden", display: "inline-block", whiteSpace: "nowrap", color: "black"}}>{inputValue || "Leave a note" }</span>
+                    </Icon2>
+                    <Icon6>
+                      <ExpandMoreIcon onClick={toggling2} />
+                    </Icon6>
+                  </li> 
+                  
+                    {isOpen2 && (  
+                  <Note>
+                  
+                    <input placeholder={inputValue? 'Write a message' : "Write a message"} onChange={onChange} value={inputValue}/>
+                    
+                  </Note> )}   
+                               
+                </DropDownList2>
+              </DropDownContainer2>
+
+              <li>
+                <Icon3>
+                  <PaymentsIcon/>
+                  <span> Receive cash for me <button style={{color: "#7000f6"}} >{amount}</button></span>
+                </Icon3>
+                <Icon5>
+                  <ExpandMoreIcon onClick={toggling3}/>
+                </Icon5>
+              </li>
+              {isOpen3 && (
+                
+              <ReceiveAmount>
+                <CurrencyInput
+                  id="input-example"
+                  name="input-name"
+                  placeholder="Amount"
+                  defaultValue={0}
+                  decimalsLimit={2}
+                  onValueChange={(value, name) => console.log(value, name)}
+                  prefix="NGN "
+                  onChange={onChange2}
+                  
+                /> 
+              </ReceiveAmount>
+             )}
             </Box3>
-            <Link to="/RequestAsSender2" style={{textDecoration: "none"}}>
+   
+            
               <BottomBtn>
                 <span>Request Spatch</span><BtnIcon><KeyboardArrowRightIcon/></BtnIcon>
               </BottomBtn>
-            </Link>
-
            </MasterBox>   
               
             </Content> 
@@ -126,6 +356,23 @@ function Sameday() {
 }
 
 export default Sameday
+
+const DropDownContainer1 = styled.div`
+
+`
+const DropDownListContainer1 = styled.div`
+
+`
+const DropDownList1 = styled.div`
+
+`
+const DropDownContainer2 = styled.div`
+
+`
+
+const DropDownList2 = styled.div`
+
+`
 
 const Container = styled.div`
 @media (min-width: 700px) {
@@ -453,7 +700,7 @@ height: 70px;
 border-radius: 8px;
 display: flex;
 justify-content: space-between;
-
+text-overflow: ellipsis;
 border: 1px solid #F1F4FB;
 align-items: center;
 color: #6E6E6E;
@@ -462,6 +709,8 @@ padding-left: 15px;
 padding-right: 15px;
 font-size: 14px;
 span{
+  overflow: hidden;
+  
   color: black;
   display: flex;
 }
@@ -525,21 +774,33 @@ const H7 = styled.div`
     color: #6E6E6E;
   }
   input {
-    font-weight: 200;
-    width: 250px;
+    font-weight: 150;
+    font-size: 14px;
   }
 `
 const  H8 = styled.div`
     display: flex;
     color: #6E6E6E;
+    input {
+      font-weight: 150;
+      font-size: 14px;
+    }
 `
 const H9 = styled.div`
     display: flex;
     color: #6E6E6E;
+    input {
+      font-weight: 150;
+      font-size: 14px;
+    }
 ` 
 const H10 = styled.div`
     display: flex;
     color: #6E6E6E;
+    input {
+      font-weight: 150;
+      font-size: 14px;
+    }
 `
 const Box3 = styled.div`
 margin-top: 15px;
@@ -549,14 +810,14 @@ margin-right: 10px;
 
 padding-left: 15px;
 padding-right: 15px;
-height: 110px;
+
 
 li {
   list-style: none;
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
-  color: #6E6E6E;  
+   
 }
 
 button {
@@ -584,8 +845,6 @@ input {
     border-radius: 8px;
     border: 1px solid #7000fb;
     padding-left: 15px;
-    padding-bottom: 20px;
-    text-align: top;
     font-size: 18px;
 }
 `
@@ -620,7 +879,7 @@ cursor: pointer;
 const BottomBtn = styled.div`
 display: flex;
 justify-content: center;
-margin-top: 50px;
+
 margin-left:10px;
 margin-right: 10px;
 border-radius: 8px;
@@ -649,4 +908,56 @@ display: flex;
 justify-content: end;
 align-items: right;
 
+`
+const DropDownHeader1 = styled.div`
+input{
+  height: 15px;
+
+  border: none;
+}
+`
+const ListItem1 = styled.div`
+border: 1px solid #7000f6;
+border-radius: 10px;
+height: 50px;
+margin: 5px;
+cursor: pointer;
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  padding: 8px 10px;
+  font-weight: 500;
+  color: #7000f6;  
+}
+
+img {
+    width: 40px;
+    
+}
+`
+const ListItem2 = styled(ListItem1)`
+
+`
+const Note = styled.div`
+text-overflow: elipsis;
+input {
+  height: 50px;
+  text-overflow: elipsis;
+}
+`
+const ReceiveAmount = styled.div`
+ display: flex;
+justify-content: center;
+align-items: center;
+
+input {
+  color: #7000f6;
+  height: 35px;
+  width: 350px;
+  text-overflow: elipsis;
+  text-align: center;
+ 
+}
 `

@@ -30,6 +30,11 @@ import NewPassword from './Dashboared2/NewPassword';
 import Help from './Dashboared2/Help';
 import MyPackageWasNotDelivered from './Dashboared2/MyPackageWasNotDelivered';
 import DeleteAccount from './Dashboared2/DeleteAccount';
+import Guest from './Dashboard/Guest';
+import Interstate from './Dashboard/Interstate'
+import InterstateGuest from './Dashboard/InterstateGuest';
+import Addcard from './Dashboared2/Addcard';
+import International from './Dashboard/International';
 
 import {
   BrowserRouter as Router,
@@ -61,12 +66,17 @@ function App() {
           <Route exact path="/Dashboard1" element= { <Dashboard1/> } />
           <Route exact path="/Dashboard2" element= { <Dashboard2/> } />
           <Route exact path="/Sameday" element= { <Sameday/> } />
+          <Route exact path="/Interstate" element= { <Interstate/> } /> 
+          <Route exact path="/InterstateGuest" element= { <InterstateGuest/> } /> 
           <Route exact path="/RequestAsSender" element= { <RequestAsSender/> } />
           <Route exact path="/RequestAsSender2" element= { <RequestAsSender2/> } />
           <Route exact path="/RequestAsSender3" element= { <RequestAsSender3/> } />
           <Route exact path="/RequestAsSender4" element= { <RequestAsSender4/> } />
           <Route exact path="/RequestAsReceiver" element= { <RequestAsReceiver/> } />
+          <Route exact path="/Guest" element= { <Guest/> } /> 
+          <Route exact path="/International" element= { <International/> } /> 
           <Route exact path="/Wallet" element= { <Wallet/> } />
+          <Route exact path="/Addcard" element= { <Addcard/> } />
           <Route exact path="/History" element= { <History/> } />
           <Route exact path="/History2" element= { <History2/> } />
           <Route exact path="/AfterFilling" element= { <AfterFilling/> } />

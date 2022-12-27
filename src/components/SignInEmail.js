@@ -5,6 +5,7 @@ import WestIcon from '@mui/icons-material/West'
 import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import { VisibilityOff } from '@mui/icons-material';
 
 
 function SignInEmail() {
@@ -33,7 +34,11 @@ setShowPassword (!showPassword);
         <LogininInput2>
            <LockIconWrap>
               <EyeIcon><LockIcon/><input placeholder="Password" type={showPassword ? "text" : "password"} required/></EyeIcon>
-              <VisibilityIcon onClick={togglePassword}/>
+              {showPassword?  
+                <VisibilityOff onClick={togglePassword}/>
+                : 
+                <VisibilityIcon onClick={togglePassword}/> 
+              }
            </LockIconWrap>
         </LogininInput2>
         <Link to="/ForgotPassword" style={{textDecoration: "none"}}>

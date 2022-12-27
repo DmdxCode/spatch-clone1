@@ -49,34 +49,40 @@ function Wallet() {
                </Container2>
                <Container3>
                 <List1>
-                <Link to="/Dashboard2" style={{textDecoration: "none"}}>
-                 <li><button id="1"><ArrowOutwardIcon/>  Request </button></li>
-                </Link>
-                <Link to="/Wallet" style={{textDecoration: "none"}}>
-                  <WalletFlexWrap>
-                    <li><span><WalletIcon style={{color: "#7000f6", marginTop: "2px"}}/></span><button> Wallet</button></li><WalletWrap><span>.</span></WalletWrap>
-                  </WalletFlexWrap>
-                </Link>
-                <Link to="/History" style={{textDecoration: "none"}}>
-                 <li><button id="3"><Inventory2Icon/> History</button></li>
-                </Link>
-                <Link to="/AfterFilling" style={{textDecoration: "none"}}>
-                 <li><button id="4"><AccountCircleTwoToneIcon /> Account</button></li>
-                </Link>
+                  <Link to="/Dashboard2" style={{textDecoration: "none"}}>
+                  <li><button id="1"><ArrowOutwardIcon/>  Request </button></li>
+                  </Link>
+                  <Link to="/Wallet" style={{textDecoration: "none"}}>
+                    <WalletFlexWrap>
+                      <li><span><WalletIcon style={{color: "#7000f6", marginTop: "2px"}}/></span><button> Wallet</button></li><WalletWrap><span>.</span></WalletWrap>
+                    </WalletFlexWrap>
+                  </Link>
+                  <Link to="/History" style={{textDecoration: "none"}}>
+                  <li><button id="3"><Inventory2Icon/> History</button></li>
+                  </Link>
+                  <Link to="/AfterFilling" style={{textDecoration: "none"}}>
+                  <li><button id="4"><AccountCircleTwoToneIcon /> Account</button></li>
+                  </Link>
                 </List1>
 
                 <List2>
-                <li><button id="3"><LogoutIcon />  Logout</button></li>
-                <Link to="/Help" style={{textDecoration: "none"}}>
-                  <li><button><SupportAgentIcon/>  Contact</button></li>
-                </Link>
+                  <Link to="/" style={{textDecoration: "none"}}>
+                      <li><button><LogoutIcon />  Logout</button></li>
+                  </Link>
+                  <Link to="/Help" style={{textDecoration: "none"}}>
+                    <li><button><SupportAgentIcon/>  Contact</button></li>
+                  </Link>
                 </List2>
                 <footer>spatch<img src="pop,logo.jpg" alt="icon"/></footer>
                 
                </Container3>
             </BurgerNav>
             <Content>
-              <TopArrow><WestIcon/><span>Wallet</span></TopArrow>
+            <Link to="/Dashboard2" style={{textDecoration: "none"}}>
+              <TopArrow>
+                <WestIcon/><span>Wallet</span>
+              </TopArrow>
+            </Link>
               <BtnTopText><h3>Welcome to your Wallet, Fisayo<br/><h6>Add money to your wallet to enjoy more intuitive experience</h6></h3> </BtnTopText>
               <BtnWrap1>
                 <Btn1>
@@ -88,13 +94,16 @@ function Wallet() {
 
               <BtnWrap2>
                 <Btn3><span>Visa <img src="spatch visa.jpg" alt="icon"/></span><footer>**** 4399</footer></Btn3>
-                <Btn4><span><AddIcon fontSize="large"/></span><button>Add new card</button></Btn4>
+                <Link to="/Addcard" style={{textDecoration: "none", display: "flex"}}>
+                  <Btn4>
+                    <span><AddIcon fontSize="large"/></span><button>Add new card</button>
+                  </Btn4>
+                </Link>
               </BtnWrap2>
               
             </Content> 
 
         </Container>
-        <BottomAddIcon><img src="add icon img-modified (1).png" alt="icon"/></BottomAddIcon>
     </>
 
   )
@@ -466,32 +475,5 @@ color: black;
 font-weight: bold;
 h6 {
   font-weight: 400;
-}
-`
-const BottomAddIcon = styled.div`
-  padding-top: 50px;
-  display: flex;
-  justify-content: end;
-  padding-right: 20px; 
-  img{   
-  height: 50% ;
-  width: 15%;
-  
-  }
-
-margin-top: 50px;
-img{
-  
-  margin-right: 20px;
-  -moz-box-shadow: 0px 5px 5px #fff;
-  -webkit-box-shadow: 0px 5px 5px #fff;
-  box-shadow: 0px 10px 35px #7000f6;
-  -moz-border-radius:50px;
-  -webkit-border-radius:190px;
-  cursor: pointer;
-  height: 10%;
-  width: 7%;
-
-
 }
 `

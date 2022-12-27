@@ -22,8 +22,13 @@ function RequestAsSender4() {
   return (
     <>
     <TopIconWrap>
-        <Mi onClick={() => setburgerStatus(true)}><MenuIcon fontSize='large'/></Mi><WarningIcon><ErrorOutlineRoundedIcon fontSize="large"/></WarningIcon>
-          </TopIconWrap>
+        <Mi onClick={() => setburgerStatus(true)}><MenuIcon fontSize='large'/></Mi>
+        <WarningIcon>
+          <Link to="/Help" style={{textDecoration: "none"}} >
+            <ErrorOutlineRoundedIcon fontSize="large" style={{color: "7000f6"}}/>
+          </Link>
+        </WarningIcon>
+    </TopIconWrap>
         <Container>
             <BackgroundImg><img src="Spatchmap.jpg" alt="background"/></BackgroundImg>
 
@@ -43,7 +48,7 @@ function RequestAsSender4() {
                <Container2>
                 <BalanceText>Wallet Balance</BalanceText>
               <Wrap>
-                <WalletBalance>N12,000</WalletBalance>
+                <WalletBalance>₦12,000</WalletBalance>
                 <Button1>
                   <PlusIcon><img src="wallet add icon-modified.png" alt="add icon"/></PlusIcon>
                   </Button1>
@@ -70,9 +75,11 @@ function RequestAsSender4() {
                 </List1>
 
                 <List2>
-                  <li><button><LogoutIcon />  Logout</button></li>
+                <Link to="/" style={{textDecoration: "none"}}>
+                    <li><button><LogoutIcon />  Logout</button></li>
+                  </Link>
                   <Link to="/Help" style={{textDecoration: "none"}}>
-                      <li><button><SupportAgentIcon/>  Contact</button></li>
+                    <li><button><SupportAgentIcon/>  Contact</button></li>
                   </Link>
                 </List2>
                 <footer>spatch<img src="pop,logo.jpg" alt="logo"/></footer>

@@ -16,12 +16,27 @@ import EmailIcon from '@mui/icons-material/Email';
 import LockIcon from '@mui/icons-material/Lock';
 function AfterFilling() {
     const [burgerStatus, setburgerStatus] = useState(false);
+    const [shareImage, setShareImage] = useState()
 
+    const handleChange = (e) => {
+      const image = e.target.files[0];
+
+      if (image === '' || image === 'undefined') {
+        alert(`Not an image`)
+        return;
+      }
+      setShareImage(image);
+    }
   return (
     <>
     <TopIconWrap>
-        <Mi onClick={() => setburgerStatus(true)}><MenuIcon fontSize='large'/></Mi><WarningIcon><ErrorOutlineRoundedIcon fontSize="large"/></WarningIcon>
-          </TopIconWrap>
+        <Mi onClick={() => setburgerStatus(true)}><MenuIcon fontSize='large'/></Mi>
+        <WarningIcon>
+          <Link to="/Help" style={{textDecoration: "none"}} >
+            <ErrorOutlineRoundedIcon fontSize="large" style={{color: "7000f6"}}/>
+          </Link>
+        </WarningIcon>
+    </TopIconWrap>
         <Container>
             
 
@@ -66,7 +81,9 @@ function AfterFilling() {
                 </List1>
 
                 <List2>
-                  <li><button><LogoutIcon />  Logout</button></li>
+                   <Link to="/" style={{textDecoration: "none"}}>
+                    <li><button><LogoutIcon />  Logout</button></li>
+                  </Link>
                   <Link to="/Help" style={{textDecoration: "none"}}>
                     <li><button><SupportAgentIcon/>  Contact</button></li>
                   </Link>
@@ -76,11 +93,26 @@ function AfterFilling() {
                </Container3>
             </BurgerNav>
             <Content>
-            <Arrow><WestIcon/><span>Account</span></Arrow>
-            <MasterBox>
+              <Link to="/Dashboard2" style={{textDecoration: "none"}} >
+                <Arrow><WestIcon/><span>Account</span></Arrow>
+              </Link>            
+              <MasterBox>
                 <h1>Personal Information</h1>
                 <h6>Add your details. We recommend uploading a photo.<br/>You'll be able to change it later.</h6>
-                <Profile style={{cursor: "pointer"}}><img src="Profilepic.jpeg" alt="profile" /> Change profile image</Profile>
+                <Profile style={{cursor: "pointer"}}> 
+                <input type="file"
+                accept='image/jpeg, image/png'
+                name='image'
+                id='file'
+                style={{display: "none"}}
+                placeholder="Select"
+                onChange={handleChange}
+                /> 
+                {shareImage && <img src={URL.createObjectURL(shareImage)} alt="profile" />}
+                <p>
+                  <label htmlFor='file' type="file" >Change profile image</label>
+                </p>
+                </Profile>
                 <NameWrap>
                   <li><input placeholder='First Name' name="First Name" type="text"></input><Person /></li>
                   <li><input placeholder='Last Name' type="text" name="Last Name"></input><Person/></li>
@@ -105,7 +137,6 @@ function AfterFilling() {
                 <submit>Save Changes</submit>
                 </SubmitBtn>
             </MasterBox>
-            <BottomAddIcon><img src="add icon img-modified (1).png" alt="icon"/></BottomAddIcon>
             </Content> 
         </Container>
 
@@ -379,6 +410,11 @@ display: flex;
 align-items: center;
 color: #7000f6;
 font-weight: 600;
+
+img { 
+    border-radius: 100%;
+    width: 13%;
+}
 `
 
 const NameWrap = styled.div`
@@ -463,7 +499,7 @@ input {
     decoration: none;
     border: none;
     height: 20px;
-    
+    width: 170px;
     font-size: 20px; 
 }
 `
@@ -493,7 +529,8 @@ input {
     decoration: none;
     border: none;
     height: 20px;
-    font-size: 20px;  
+    font-size: 20px;
+    width: 170px;
 }
 `
 const Code = styled.div`
@@ -541,34 +578,6 @@ submit{
   display: flex;
   justify-content: center;
   align-items: center;
-}
-`
-const BottomAddIcon = styled.div`
-  padding-top: 50px;
-  display: flex;
-  justify-content: end;
-  padding-right: 20px; 
-  margin-bottom: 35px;
-  img{   
-  height: 50% ;
-  width: 15%;
-  
-  }
-
-margin-top: 0px;
-img{
-  
-  margin-right: 20px;
-  -moz-box-shadow: 0px 5px 5px #fff;
-  -webkit-box-shadow: 0px 5px 5px #fff;
-  box-shadow: 0px 10px 35px #7000f6;
-  -moz-border-radius:50px;
-  -webkit-border-radius:190px;
-  cursor: pointer;
-  height: 40px;
-  width: 40px;
-
-
 }
 `
 const H8 = styled.div`

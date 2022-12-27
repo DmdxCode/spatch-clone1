@@ -20,7 +20,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import CurrencyInput from 'react-currency-input-field';
 
-function RequestAsReceiver() {
+function Interstate() {
     const [burgerStatus, setburgerStatus] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const toggling = () => {
@@ -185,69 +185,60 @@ const toggleHandle5 = () => {
            <MasterBox>
             <BoxHead><span>Same Day</span><KeyboardArrowDownIcon fontSize="large"/></BoxHead>
             <MinBoxWrap>
-              <MinBox1>
-                <Link to="/sameday" style={{textDecoration: "none"}}>
-                 <img src="icon (1).png" alt="icon"/><span>sender</span>
-                </Link>
-              </MinBox1>
-              <MinBox2>
-              <Link to="/RequestAsReceiver" style={{textDecoration: "none"}}>
-                <img src="icon (2).png" alt="icon"/><span>receiver</span>
-              </Link>
-              </MinBox2>
+              <MinBox1><img src="icon (1).png" alt="icon"/><span>sender</span></MinBox1>
+              
               <MinBox3>
-              <Link to="/Guest" style={{textDecoration: "none"}}>
-                <img src="icon (3).png" alt="icon"/><span>guest</span>
-              </Link>
+                <Link to="/InterstateGuest" style={{textDecoration: "none", display: "flex" }}>
+                  <img src="icon (3).png" alt="icon"/><span>guest</span>
+                </Link>
               </MinBox3>
             </MinBoxWrap>
             <Box1>
               <span>
-                <img src="icon (5) unside.png" alt="icon"/>
+                <img src="icon (4).png" alt="icon"/>
                 <button style={{border: "none", backgroundColor: "white"}}>
                   <input value={cancle1} onChange={toggleCancle1} placeholder= "Pick from..." 
                   style={{width: "180px", textOverflow : "ellipsis", overflow: "hidden", display: "inline-block", whiteSpace: "nowrap", border: "none", WebkitAppearance: "none", outline: "none",decoration: "none", fontWeight: "bold", fontSize: "15px"}} />
                 </button>
               </span>
-              { cancle1?
-               <CloseIcon onClick={toggleHandle}/>
-               : ""
-              }
+              {cancle1?
+                 <CloseIcon onClick={toggleHandle}/>
+                 : ""
+                }            
             </Box1>
             <Box2>
               <span>
-                <H7><img src="yellow icon (1).png" alt="icon"/>
+                <H7><img src="icon (5).png" alt="icon"/>
                   <button> 
                     <input value={cancle2} onChange={toggleCancle2} type="text" placeholder={ 'Where are we delivering to?' } style={{width: "200px", textOverflow : "ellipsis", overflow: "hidden", display: "inline-block", whiteSpace: "nowrap", fontWeight: "bold", fontSize: "15px" }} />
                   </button>
                 </H7>
                 {cancle2?
-                  <CloseIcon onClick={toggleHandle2}/>
-                  : <GpsNotFixedOutlinedIcon onClick={toggleHandle2}/>
+                 <CloseIcon onClick={toggleHandle2}/>
+                 : <GpsNotFixedOutlinedIcon onClick={toggleHandle2}/>
                 }
               </span>
               <span>
-                <H8><img src="yellow icon (2).png" alt="icon"/>
+                <H8><img src="icon (6).png" alt="icon"/>
                   <button>
-                    <input value={cancle3} onChange={toggleCancle3} placeholder= "Sender's name" style={{width: "180px", textOverflow : "ellipsis", overflow: "hidden", display: "inline-block", whiteSpace: "nowrap", fontWeight: "bold", fontSize: "15px"}} required/>
+                    <input value={cancle3} onChange={toggleCancle3} placeholder= "Receiver's name" style={{width: "180px", textOverflow : "ellipsis", overflow: "hidden", display: "inline-block", whiteSpace: "nowrap", fontWeight: "bold", fontSize: "15px"}} required/>
                   </button>
                 </H8>
-                {cancle3? 
-                 <CloseIcon onClick={toggleHandle3}/> 
-                : ""
+                {cancle3?
+                 <CloseIcon onClick={toggleHandle3}/>
+                 : ""
                 }
               </span>
               <span>
-                <H9><img src="yellow icon (3).png" alt="icon"/>
+                <H9><img src="icon (7).png" alt="icon"/>
                   <button>
-                    <input value={cancle4} onChange={toggleCancle4} type="number" id="number" placeholder="Sender's phone" input require="+234" style={{ fontWeight: "bold"}}/>
+                    <input value={cancle4} onChange={toggleCancle4} type="number" id="number" placeholder="+234 | 809 000 4030" input require="+234" />
                   </button>
                 </H9>
                 {cancle4?
                  <CloseIcon onClick={toggleHandle4}/>
                  : ""
-                }
-              </span>
+                }              </span>
               <span>
                 <H10><img src="icon (8).png" alt="icon"/>
                   <button>
@@ -257,7 +248,7 @@ const toggleHandle5 = () => {
                 {cancle5?
                  <CloseIcon onClick={toggleHandle5}/>
                  : ""
-                }
+                }              
               </span>
             </Box2>
             <Box3>
@@ -348,7 +339,6 @@ const toggleHandle5 = () => {
               <BottomBtn>
                 <span>Request Spatch</span><BtnIcon><KeyboardArrowRightIcon/></BtnIcon>
               </BottomBtn>
-            
 
            </MasterBox>   
               
@@ -361,7 +351,7 @@ const toggleHandle5 = () => {
   )
 }
 
-export default RequestAsReceiver
+export default Interstate
 
 const DropDownContainer1 = styled.div`
 
@@ -661,6 +651,7 @@ span {
 `
 const MinBoxWrap = styled.div`
 display: flex;
+justify-content: space-between;
 padding-left: 20px;
 padding-right: 20px;
 margin-bottom: 15px;
@@ -672,7 +663,8 @@ height: 40px;
 width: 250px; 
 margin: 5px;
 border-radius: 7px;
-background-color:#F1F4FB ;
+background-color: white;
+border: 1px solid #7000f6;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -683,13 +675,6 @@ img {
 span {
   
 }
-`
-const MinBox2 = styled(MinBox1)`
-background-color: white;
-border: 1px solid #7000f6;
-color: #6E6E6E;
-
-
 `
 const MinBox3 = styled(MinBox1)`
 background-color: #F1F4FB;

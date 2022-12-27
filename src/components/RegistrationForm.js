@@ -4,16 +4,18 @@ import styled from 'styled-components'
 import WestIcon from '@mui/icons-material/West';
 import PersonIcon from '@mui/icons-material/Person';
 import LockIcon from '@mui/icons-material/Lock';
-import Visibility from '@mui/icons-material/Visibility';
 import 'react-phone-number-input/style.css'
 import PhoneInput from 'react-phone-number-input'
+import VisibilityIcon from '@mui/icons-material/Visibility';
+import { VisibilityOff } from '@mui/icons-material';
 
 function RegistrationForm() {
    const [showPassword, setShowPassword] = useState(false);
    const togglePassword = () => {
  setShowPassword (!showPassword);
    }
-   const [value, setValue] = useState()
+
+  const [value, setValue] = useState()
   return (
     <>
     <Header>
@@ -33,11 +35,18 @@ function RegistrationForm() {
             <PersonIconWrap><PersonIcon/></PersonIconWrap><input placeholder='Usman Jaguar'/>
         </LoginInput1>
         <LoginInput2>
-            <LockIconWrap><VisibilityIconWrap><LockIcon /><input type={showPassword ? "text" : "password"} placeholder='Password'/></VisibilityIconWrap><Visibility onClick={togglePassword}/></LockIconWrap>
+            <LockIconWrap><VisibilityIconWrap><LockIcon /><input type={showPassword ? "text" : "password"} placeholder='Password'/></VisibilityIconWrap>
+              {showPassword?  
+                <VisibilityOff onClick={togglePassword}/>
+                : 
+                <VisibilityIcon onClick={togglePassword}/> 
+              }
+            </LockIconWrap>
         </LoginInput2>
         <NameWrap> 
           <PhoneInput
-            country="+234"
+            international
+            defaultCountry='NG'
             value={value}
             onChange={setValue} placeholder="+234 903453267" style={{borderBottom: "2px solid #7000f6", width: "365px", paddingBottom: "15px"}}/>
         </NameWrap>

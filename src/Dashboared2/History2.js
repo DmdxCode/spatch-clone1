@@ -22,7 +22,12 @@ function History2() {
   return (
     <>
     <TopIconWrap>
-        <Mi onClick={() => setburgerStatus(true)}><MenuIcon fontSize='large'/></Mi><WarningIcon><ErrorOutlineRoundedIcon fontSize="large"/></WarningIcon>
+        <Mi onClick={() => setburgerStatus(true)}><MenuIcon fontSize='large'/></Mi>
+        <WarningIcon>
+          <Link to="/Help" style={{textDecoration: "none"}} >
+            <ErrorOutlineRoundedIcon fontSize="large" style={{color: "7000f6"}}/>
+          </Link>
+        </WarningIcon>
           </TopIconWrap>
         <Container>
             <BackgroundImg></BackgroundImg>
@@ -70,7 +75,9 @@ function History2() {
                 </List1>
 
                 <List2>
-                  <li><button><LogoutIcon />  Logout</button></li>
+                  <Link to="/" style={{textDecoration: "none"}}>
+                    <li><button><LogoutIcon />  Logout</button></li>
+                  </Link>
                   <Link to="/Help" style={{textDecoration: "none"}}>
                     <li><button><SupportAgentIcon/>  Contact</button></li>
                   </Link>
@@ -130,7 +137,6 @@ function History2() {
             </Content> 
 
         </Container>
-        <BottomAddIcon><img src="add icon img-modified (1).png" alt="icon"/></BottomAddIcon>
     </>
 
   )
@@ -644,24 +650,4 @@ border-radius: 0px 0px 7.04px 7.04px;
 
 
 
-const BottomAddIcon = styled.div`
-padding-top: 30px;
-display: flex;
-justify-content: end;
-margin-top: 40px;
-margin-bottom: 20px;
-img{
 
-margin-right: 20px;
--moz-box-shadow: 0px 5px 5px #fff;
--webkit-box-shadow: 0px 5px 5px #fff;
-box-shadow: 0px 10px 35px #7000f6;
--moz-border-radius:50px;
--webkit-border-radius:190px;
-cursor: pointer;
-height: 50px;
-width: 50px;
-
-
-}
-`

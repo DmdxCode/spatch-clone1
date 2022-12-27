@@ -61,8 +61,8 @@ const Container = styled.div`
 }
 
 
-padding-left: 30px;
-padding-right: 30px;
+padding-left: 10px;
+padding-right: 10px;
 padding-top: 0px;
 padding-bottom: 0px;
 

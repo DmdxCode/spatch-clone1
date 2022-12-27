@@ -16,8 +16,13 @@ function Dashboard2() {
   return (
     <>
     <TopIconWrap>
-        <Mi onClick={() => setburgerStatus(true)}><MenuIcon fontSize='large'/></Mi><WarningIcon><ErrorOutlineRoundedIcon fontSize="large"/></WarningIcon>
-          </TopIconWrap>
+        <Mi onClick={() => setburgerStatus(true)}><MenuIcon fontSize='large'/></Mi>
+          <WarningIcon>
+            <Link to="/Help" style={{textDecoration: "none"}} >
+             <ErrorOutlineRoundedIcon fontSize="large" style={{color: "7000f6"}}/>
+            </Link>
+          </WarningIcon>
+    </TopIconWrap>
         <Container>
             <BackgroundImg><img src="Spatchmap.jpg" alt="background"/></BackgroundImg>
 
@@ -47,24 +52,26 @@ function Dashboard2() {
                </Container2>
                <Container3>
                 <List1>
-                  <Link to="/Dashboard2" style={{textDecoration: "none"}}>
+                  <Link to="/Dashboard2" style={{textDecoration: "none", display: "flex"}}>
                     <RequestWrap>
                       <li><button><ArrowOutwardIcon style={{color: '#7000f6'}}/>  Request </button></li><span>.</span>
                     </RequestWrap>
                   </Link>
-                  <Link to="/Wallet" style={{textDecoration: "none"}}>
+                  <Link to="/Wallet" style={{textDecoration: "none", display: "flex"}}>
                 <li><button><WalletIcon />  Wallet</button></li>
                 </Link>
-                <Link to="/History" style={{textDecoration: "none"}}>
+                <Link to="/History" style={{textDecoration: "none", display: "flex"}}>
                  <li><button><Inventory2Icon/> History</button></li>
                 </Link>
-                <Link to="/History" style={{textDecoration: "none"}}>
+                <Link to="/History" style={{textDecoration: "none", display: "flex"}}>
                   <li><button><AccountCircleTwoToneIcon /> Account</button></li>
                 </Link>
                 </List1>
 
                 <List2>
-                <li><button><LogoutIcon />  Logout</button></li>
+                  <Link to="/" style={{textDecoration: "none"}}>
+                    <li><button><LogoutIcon />  Logout</button></li>
+                  </Link>
                 <li><button><SupportAgentIcon/>  Contact</button></li>
                 </List2>
                 <footer>spatch<img src="pop,logo.jpg" alt="icon"/></footer>
@@ -74,17 +81,23 @@ function Dashboard2() {
             <Content>
               <BtnTopText>Would you like to request?</BtnTopText>
               <BtnWrap1>
-              <Link to="/Sameday" style={{textDecoration: "none"}}>
-                <Btn1><Img><img src="pop,logo.jpg" alt="icon"/></Img> 
-                  <span>Same Day</span>
-                </Btn1>
-              </Link>
-                <Btn2><Img><img src="pop,logo.jpg" alt="icon"/></Img><span>Express</span></Btn2>
+                <Link to="/Sameday" style={{textDecoration: "none", display: "flex"}}>
+                  <Btn1><Img><img src="pop,logo.jpg" alt="icon"/></Img> 
+                    <span>Same Day</span>
+                  </Btn1>
+                </Link>
+                <Link to="/Sameday" style={{textDecoration: "none", display: "flex"}}>
+                  <Btn2><Img><img src="pop,logo.jpg" alt="icon"/></Img><span>Express</span></Btn2>
+                </Link> 
               </BtnWrap1>
 
               <BtnWrap2>
+              <Link to="/Interstate" style={{textDecoration: "none", display: "flex"}}>
                 <Btn3><Img><img src="pop,logo.jpg" alt="icon"/></Img><span>Interstate</span></Btn3>
+              </Link>
+              <Link to="/International" style={{textDecoration: "none", display: "flex"}}>
                 <Btn4><Img><img src="pop,logo.jpg" alt="ico3"/></Img><span>International</span></Btn4>
+              </Link>
               </BtnWrap2>
               
             </Content> 

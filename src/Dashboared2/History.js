@@ -14,14 +14,20 @@ import WestIcon from '@mui/icons-material/West';
 import PanoramaFishEyeIcon from '@mui/icons-material/PanoramaFishEye';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
+//import Record from '../Dashboard/Record.json';
 
 function History() {
     const [burgerStatus, setburgerStatus] = useState(false);
   return (
     <>
     <TopIconWrap>
-        <Mi onClick={() => setburgerStatus(true)}><MenuIcon fontSize='large'/></Mi><WarningIcon><ErrorOutlineRoundedIcon fontSize="large"/></WarningIcon>
-          </TopIconWrap>
+        <Mi onClick={() => setburgerStatus(true)}><MenuIcon fontSize='large'/></Mi>
+        <WarningIcon>
+          <Link to="/Help" style={{textDecoration: "none"}} >
+            <ErrorOutlineRoundedIcon fontSize="large" style={{color: "7000f6"}}/>
+          </Link>
+        </WarningIcon>
+    </TopIconWrap>
         <Container>
             <BackgroundImg></BackgroundImg>
 
@@ -68,7 +74,9 @@ function History() {
                 </List1>
 
                 <List2>
-                  <li><button><LogoutIcon />  Logout</button></li>
+                  <Link to="/" style={{textDecoration: "none"}}>
+                    <li><button><LogoutIcon />  Logout</button></li>
+                  </Link>
                   <Link to="/Help" style={{textDecoration: "none"}}>
                     <li><button><SupportAgentIcon/>  Contact</button></li>
                   </Link>
@@ -78,17 +86,18 @@ function History() {
                </Container3>
             </BurgerNav>
             <Content>
-            <Link to="/History" style={{textDecoration: "none"}}>
+            <Link to="/Dashboard2" style={{textDecoration: "none"}}>
               <TopArrow><WestIcon/><span>History</span></TopArrow>
-              <BtnTopText><h3>These are your order history<br/><h6>Confirm your current password</h6></h3> </BtnTopText>
             </Link>
+              <BtnTopText><h3>These are your order history<br/><h6>Confirm your current password</h6></h3> </BtnTopText>
+            
               <Table>
                 <Tr1><span><tr>20 August 2021, 12:32pm</tr><tr>Surulere,Lagos</tr></span>
                 <span><td>NGN 2,800.00</td><CardSpan>Card 4399<span><PanoramaFishEyeIcon fontSize="small"/></span></CardSpan></span></Tr1>
                 <Flex>
                 <Grid1>
                 <span><img src="yellow icon (1) up.png" alt="icon"/><button>Picked From</button></span>
-                <Tr2><td>Fisayo Ahmed</td><h8>Yar'Adua Penthous...</h8></Tr2>
+                <Tr2><td>Fisayo Ahmed</td><h8>Yar'Adua Penthous...</h8></Tr2>             
                 <span><img src="icon (5) down.png" alt="icon"/><b>Delivered To</b></span>
                 <Tr><td>Uche Osifejo</td><h8>Yar'Adua Penthous...</h8></Tr>
                 </Grid1>
@@ -116,7 +125,6 @@ function History() {
               </Tr1>
               </RecieptHistory>
             </Content> 
-            <BottomAddIcon><img src="add icon img-modified (1).png" alt="icon"/></BottomAddIcon>
         </Container>
         
     </>
@@ -387,27 +395,6 @@ font-weight: bold;
 margin-left: 10px;
 margin-bottom: 25px;
 cusor: pointer;
-}
-`
-const BottomAddIcon = styled.div`
-  padding-top: 30px;
-  display: flex;
-  justify-content: end;
-  margin-top: 40px;
-  margin-bottom: 20px;
-img{
-  
-  margin-right: 20px;
-  -moz-box-shadow: 0px 5px 5px #fff;
-  -webkit-box-shadow: 0px 5px 5px #fff;
-  box-shadow: 0px 10px 35px #7000f6;
-  -moz-border-radius:50px;
-  -webkit-border-radius:190px;
-  cursor: pointer;
-  height: 50px;
-  width: 50px;
-
-
 }
 `
 

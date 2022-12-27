@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import WestIcon from '@mui/icons-material/West'
@@ -7,6 +7,12 @@ import LockIcon from '@mui/icons-material/Lock';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 
 function SignInNumber() {
+const [showPassword, setShowPassword] = useState(false);
+
+const togglePassword = () => {
+  setShowPassword(!showPassword)
+}
+
   return (
     <>
     <Header>
@@ -22,13 +28,13 @@ function SignInNumber() {
           <h1>Sign in to Spatch.</h1>
           <h7>please enter your sign in detail</h7>
           <LoginInput1>
-            <SmartphoneIconWrap><SmartphoneIcon/></SmartphoneIconWrap> <span> <input placeholder="+234 915 182 5173 " type="@" id="email" required/></span>
+            <SmartphoneIconWrap><SmartphoneIcon/></SmartphoneIconWrap> <span> <input placeholder="+234 915 182 5173 " type="number" id="email" required/></span>
           </LoginInput1>
 
           <LogininInput2>
             <LockIconWrap>
-              <EyeIcon><LockIcon/> <span><input placeholder="Password" type="number text" id="password" required/></span></EyeIcon>
-              <VisibilityIcon />
+              <EyeIcon><LockIcon/> <span><input placeholder="Password" type={showPassword ? "text" : "password"} required/></span></EyeIcon>
+              <VisibilityIcon onClick={togglePassword} />
             </LockIconWrap>
           </LogininInput2>
           <h6>Forgot password?</h6>
@@ -54,7 +60,6 @@ padding-left: 10px;
      img {
         height: 22px;
      }
-
 `
 const Container = styled.div`
 @media (min-width: 700px) {

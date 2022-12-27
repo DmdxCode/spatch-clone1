@@ -20,7 +20,7 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import CurrencyInput from 'react-currency-input-field';
 
-function RequestAsReceiver() {
+function Guest() {
     const [burgerStatus, setburgerStatus] = useState(false);
     const [isOpen, setIsOpen] = useState(false);
     const toggling = () => {
@@ -195,11 +195,7 @@ const toggleHandle5 = () => {
                 <img src="icon (2).png" alt="icon"/><span>receiver</span>
               </Link>
               </MinBox2>
-              <MinBox3>
-              <Link to="/Guest" style={{textDecoration: "none"}}>
-                <img src="icon (3).png" alt="icon"/><span>guest</span>
-              </Link>
-              </MinBox3>
+              <MinBox3><img src="icon (3).png" alt="icon"/><span>guest</span></MinBox3>
             </MinBoxWrap>
             <Box1>
               <span>
@@ -348,7 +344,6 @@ const toggleHandle5 = () => {
               <BottomBtn>
                 <span>Request Spatch</span><BtnIcon><KeyboardArrowRightIcon/></BtnIcon>
               </BottomBtn>
-            
 
            </MasterBox>   
               
@@ -361,7 +356,7 @@ const toggleHandle5 = () => {
   )
 }
 
-export default RequestAsReceiver
+export default Guest
 
 const DropDownContainer1 = styled.div`
 
@@ -685,17 +680,11 @@ span {
 }
 `
 const MinBox2 = styled(MinBox1)`
-background-color: white;
-border: 1px solid #7000f6;
-color: #6E6E6E;
-
-
+background-color: #F1F4FB;
 `
 const MinBox3 = styled(MinBox1)`
-background-color: #F1F4FB;
-border: none;
-color: #6E6E6E;
-
+background-color: white;
+border: 1px solid #7000f6;
 `
 const Box1 = styled.div`
 margin-top: 20px;

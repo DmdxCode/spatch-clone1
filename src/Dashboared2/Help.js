@@ -9,8 +9,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-
-
+import WestIcon from '@mui/icons-material/West'
 function Help() {
     const [burgerStatus, setburgerStatus] = useState(false);
   return (
@@ -63,6 +62,9 @@ function Help() {
             <Content>
             
             <MasterBox>
+            <Link to="/Dashboard2" style={{textDecoration: "none"}}>
+             <Arrow><WestIcon style={{cursor: "pointer", marginTop: "50px", color: "6e6e6e"}}/></Arrow>
+            </Link>
                 <span><h1>Help</h1>
                 <Link to="/Dashboard2" style={{textDecoration: "none", color: "black"}}>
                  <img src="cancle icon.png" alt="icon"/>
@@ -288,7 +290,17 @@ const Content = styled.div`
 }
  
 `
-
+const Arrow = styled.div`
+color: #7000f6;
+display: flex;
+margin-bottom: 15px;
+span{
+    font-size: 23px;
+    color: black;
+    font-weight: bold;
+    margin-left: 10px;
+}
+`
 const MasterBox =styled.div`
 overflow: hidden; 
 padding-top: 10px;
