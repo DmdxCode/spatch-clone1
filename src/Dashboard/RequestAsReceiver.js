@@ -180,11 +180,15 @@ const toggleHandle5 = () => {
               </Container3>
             </BurgerNav>
             <Content>
+            <Arrow style={{display: "flex"}}>
             <Link to="/Dashboard2" style={{textDecoration: "none"}}>
-              <Arrow><WestIcon/><span>Request</span></Arrow>
+              <WestIcon style={{color: "#7000f6"}}/>
             </Link>
+              <span>Request</span>
+            </Arrow>
+            
            <MasterBox>
-            <BoxHead><span>Same Day</span><KeyboardArrowDownIcon fontSize="large"/></BoxHead>
+            <BoxHead ><span style={{display: "flex"}}>Same Day<KeyboardArrowDownIcon fontSize="large" style={{color: "#6e6e6e"}}/></span></BoxHead>
             <MinBoxWrap>
               <MinBox1>
                 <Link to="/sameday" style={{textDecoration: "none"}}>

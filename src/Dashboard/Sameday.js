@@ -181,10 +181,10 @@ const toggleHandle5 = () => {
             </BurgerNav>
             <Content>
             <Link to="/Dashboard2" style={{textDecoration: "none"}}>
-              <Arrow><WestIcon/><span>Request</span></Arrow>
+              <Arrow style={{display: "flex"}}><WestIcon/><span>Request</span></Arrow>
             </Link>
            <MasterBox>
-            <BoxHead><span>Same Day</span><KeyboardArrowDownIcon fontSize="large"/></BoxHead>
+            <BoxHead ><span style={{display: "flex"}}>Same Day<KeyboardArrowDownIcon fontSize="large" style={{color: "#6e6e6e"}}/></span></BoxHead>
             <MinBoxWrap>
               <MinBox1><img src="icon (1).png" alt="icon"/><span>sender</span></MinBox1>
               <MinBox2>

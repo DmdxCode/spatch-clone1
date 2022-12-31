@@ -79,11 +79,12 @@ function Wallet() {
             </BurgerNav>
             <Content>
               <ContentWrap>
-                <Link to="/Dashboard2" style={{textDecoration: "none"}}>
-                  <TopArrow>
-                    <WestIcon/><span>Wallet</span>
+                  <TopArrow style={{display: "flex"}}>
+                  <Link to="/Dashboard2" style={{textDecoration: "none"}}>
+                    <WestIcon style={{color: "#7000f6"}}/>
+                  </Link><span>Wallet</span>
                   </TopArrow>
-                </Link>
+                
               
                 <BtnTopText><h3>Welcome to your Wallet, Fisayo<br/><h6>Add money to your wallet to enjoy more intuitive experience</h6></h3> </BtnTopText>
                 <BtnWrap1>
@@ -345,6 +346,8 @@ const Content = styled.div`
   overflow: hidden;
   padding-top: 5vh;
 }
+padding-left: 10px;
+padding-right: 10px;
 `
 const TopArrow = styled.div`
 color: #7000f6;
@@ -366,7 +369,7 @@ justify-content: center;
 const Btn1 = styled.div`
 height: 150px;
 background-color: #f2f2f2;
-width: 340px;
+width: 310px;
 border-radius: 15px;
 cursor: pointer;
 padding-left: 25px;
@@ -418,9 +421,9 @@ margin-bottom: 30px;
 const Btn3 = styled.div`
 height: 110px;
 background-color: #0F929C;
-width: 175px;
+width: 160px;
 border-radius: 10px;
-margin-right: 13px;
+margin-right: 10px;
 cursor: pointer;
 
 img {
@@ -453,7 +456,7 @@ footer {
 const Btn4 = styled.div`
 height: 110px;
 background-color: #f2f2f2;
-width: 175px;
+width: 160px;
 border-radius: 10px;
 cursor: pointer;
 display: flex;
