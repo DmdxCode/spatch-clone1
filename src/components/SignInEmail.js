@@ -32,12 +32,12 @@ setShowPassword (!showPassword);
         </LoginInput1>
 
         <LogininInput2>
-           <LockIconWrap>
-              <EyeIcon><LockIcon/><input placeholder="Password" type={showPassword ? "text" : "password"} required/></EyeIcon>
+           <LockIconWrap style={{display: "flex", justifyContent: "space-between"}}>
+              <EyeIcon style={{display: "flex"}}><LockIcon/><input placeholder="Password" type={showPassword ? "text" : "password"} required/></EyeIcon>
               {showPassword?  
-                <VisibilityOff onClick={togglePassword}/>
+                <VisibilityOff onClick={togglePassword} style={{cursor: "pointer"}}/>
                 : 
-                <VisibilityIcon onClick={togglePassword}/> 
+                <VisibilityIcon onClick={togglePassword} style={{cursor: "pointer"}}/> 
               }
            </LockIconWrap>
         </LogininInput2>
@@ -174,6 +174,7 @@ border-bottom: 2px solid #7000F6;
     -webkit-appearance: none;
     outline: none;
     decoration: none;
+    width: 200px;
     border: none;
     color: #7000F6;
     font-weight: bold;

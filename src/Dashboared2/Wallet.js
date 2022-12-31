@@ -69,7 +69,7 @@ function Wallet() {
                   <Link to="/" style={{textDecoration: "none"}}>
                       <li><button><LogoutIcon />  Logout</button></li>
                   </Link>
-                  <Link to="/Help" style={{textDecoration: "none"}}>
+                  <Link to="/Contact" style={{textDecoration: "none"}}>
                     <li><button><SupportAgentIcon/>  Contact</button></li>
                   </Link>
                 </List2>
@@ -78,29 +78,31 @@ function Wallet() {
                </Container3>
             </BurgerNav>
             <Content>
-            <Link to="/Dashboard2" style={{textDecoration: "none"}}>
-              <TopArrow>
-                <WestIcon/><span>Wallet</span>
-              </TopArrow>
-            </Link>
-              <BtnTopText><h3>Welcome to your Wallet, Fisayo<br/><h6>Add money to your wallet to enjoy more intuitive experience</h6></h3> </BtnTopText>
-              <BtnWrap1>
-                <Btn1>
-                  Balance<br/><span>NGN 10,000</span>
-                  <MiniBtn><span><AddIcon fontSize="large"/></span>Add money</MiniBtn>
-                </Btn1>
-                
-              </BtnWrap1>
-
-              <BtnWrap2>
-                <Btn3><span>Visa <img src="spatch visa.jpg" alt="icon"/></span><footer>**** 4399</footer></Btn3>
-                <Link to="/Addcard" style={{textDecoration: "none", display: "flex"}}>
-                  <Btn4>
-                    <span><AddIcon fontSize="large"/></span><button>Add new card</button>
-                  </Btn4>
+              <ContentWrap>
+                <Link to="/Dashboard2" style={{textDecoration: "none"}}>
+                  <TopArrow>
+                    <WestIcon/><span>Wallet</span>
+                  </TopArrow>
                 </Link>
-              </BtnWrap2>
               
+                <BtnTopText><h3>Welcome to your Wallet, Fisayo<br/><h6>Add money to your wallet to enjoy more intuitive experience</h6></h3> </BtnTopText>
+                <BtnWrap1>
+                  <Btn1>
+                    Balance<br/><span>NGN 10,000</span>
+                    <MiniBtn><span><AddIcon fontSize="large"/></span>Add money</MiniBtn>
+                  </Btn1>
+                  
+                </BtnWrap1>
+
+                <BtnWrap2>
+                  <Btn3><span>Visa <img src="spatch visa.jpg" alt="icon"/></span><footer>**** 4399</footer></Btn3>
+                  <Link to="/Addcard" style={{textDecoration: "none", display: "flex"}}>
+                    <Btn4>
+                      <span><AddIcon fontSize="large"/></span><button>Add new card</button>
+                    </Btn4>
+                  </Link>
+                </BtnWrap2>
+              </ContentWrap>  
             </Content> 
 
         </Container>
@@ -111,6 +113,12 @@ function Wallet() {
 
 export default Wallet
 
+const ContentWrap = styled.div`
+display: grid;
+justify-content: center;
+
+`
+
 const Container = styled.div`
 @media (min-width: 500px) {
   display: flex-box;
@@ -118,13 +126,10 @@ const Container = styled.div`
   align-items: center;
   padding-top: 5vh; 
   overflow: hidden; 
-  padding-left: 450px;
   padding-right: 0px; 
 }
 
 
-padding-left: 10px;
-padding-right: 10px;
 padding-top: 0px;
 padding-bottom: 0px;
 
@@ -338,8 +343,6 @@ const Content = styled.div`
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  padding-left: 10px;
-  padding-right: 10px;
   padding-top: 5vh;
 }
 `
@@ -358,12 +361,12 @@ cusor: pointer;
 const BtnWrap1 = styled.div`
 display: flex;
 margin-top: 20px;
-
+justify-content: center;
 `
 const Btn1 = styled.div`
 height: 150px;
 background-color: #f2f2f2;
-width: 400px;
+width: 340px;
 border-radius: 15px;
 cursor: pointer;
 padding-left: 25px;
@@ -406,6 +409,7 @@ span {
 
 const BtnWrap2 = styled.div`
 display: flex;
+justify-content: center;
 padding-top: 15px;
 margin-bottom: 30px;
 
@@ -414,7 +418,7 @@ margin-bottom: 30px;
 const Btn3 = styled.div`
 height: 110px;
 background-color: #0F929C;
-width: 205px;
+width: 175px;
 border-radius: 10px;
 margin-right: 13px;
 cursor: pointer;
@@ -449,7 +453,7 @@ footer {
 const Btn4 = styled.div`
 height: 110px;
 background-color: #f2f2f2;
-width: 205px;
+width: 175px;
 border-radius: 10px;
 cursor: pointer;
 display: flex;

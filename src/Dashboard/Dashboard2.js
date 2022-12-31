@@ -72,34 +72,38 @@ function Dashboard2() {
                   <Link to="/" style={{textDecoration: "none"}}>
                     <li><button><LogoutIcon />  Logout</button></li>
                   </Link>
-                <li><button><SupportAgentIcon/>  Contact</button></li>
+                  <Link to="/Contact" style={{textDecoration: "none"}}>
+                    <li><button><SupportAgentIcon/>  Contact</button></li>
+                  </Link>
                 </List2>
                 <footer>spatch<img src="pop,logo.jpg" alt="icon"/></footer>
                 
                </Container3>
             </BurgerNav>
             <Content>
-              <BtnTopText>Would you like to request?</BtnTopText>
-              <BtnWrap1>
-                <Link to="/Sameday" style={{textDecoration: "none", display: "flex"}}>
-                  <Btn1><Img><img src="pop,logo.jpg" alt="icon"/></Img> 
-                    <span>Same Day</span>
-                  </Btn1>
-                </Link>
-                <Link to="/Sameday" style={{textDecoration: "none", display: "flex"}}>
-                  <Btn2><Img><img src="pop,logo.jpg" alt="icon"/></Img><span>Express</span></Btn2>
-                </Link> 
-              </BtnWrap1>
-
-              <BtnWrap2>
-              <Link to="/Interstate" style={{textDecoration: "none", display: "flex"}}>
-                <Btn3><Img><img src="pop,logo.jpg" alt="icon"/></Img><span>Interstate</span></Btn3>
-              </Link>
-              <Link to="/International" style={{textDecoration: "none", display: "flex"}}>
-                <Btn4><Img><img src="pop,logo.jpg" alt="ico3"/></Img><span>International</span></Btn4>
-              </Link>
-              </BtnWrap2>
+              <Wrap2> 
+                <BtnTopText>Would you like to request?</BtnTopText>
+                <BtnWrap1>
+                  <Link to="/Sameday" style={{textDecoration: "none", display: "flex"}}>
+                    <Btn1><Img><img src="pop,logo.jpg" alt="icon"/></Img> 
+                      <span>Same Day</span>
+                    </Btn1>
+                  </Link>
+                  <Link to="/Sameday" style={{textDecoration: "none", display: "flex"}}>
+                    <Btn2><Img><img src="pop,logo.jpg" alt="icon"/></Img><span>Express</span></Btn2>
+                  </Link> 
+                </BtnWrap1>
+                
+                <BtnWrap2>
+                  <Link to="/Interstate" style={{textDecoration: "none", display: "flex"}}>
+                    <Btn3><Img><img src="pop,logo.jpg" alt="icon"/></Img><span>Interstate</span></Btn3>
+                  </Link>
+                  <Link to="/International" style={{textDecoration: "none", display: "flex"}}>
+                    <Btn4><Img><img src="pop,logo.jpg" alt="ico3"/></Img><span>International</span></Btn4>
+                  </Link>
+                </BtnWrap2>
               
+              </Wrap2>
             </Content> 
 
         </Container>
@@ -117,13 +121,13 @@ const Container = styled.div`
   align-items: center;
 
   overflow: hidden; 
-  padding-left: 500px;
+  padding-left: 100px;
   padding-right: 100px; 
 }
 
 
-padding-left: 10px;
-padding-right: 10px;
+margin-left: 10px;
+margin-right: 10px;
 padding-top: 70px;
 padding-bottom: 0px;
 overflow: hidden;
@@ -346,14 +350,14 @@ const Content = styled.div`
 @media (max-width: 1000px) {
   display: flex-box;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  padding-left: 10px;
-  padding-right: 10px;
+  align-items: center; 
+  
   padding-top: 5vh;
+ 
+  
 }
-}
-
+padding-left: 10px;
+padding-right: 10px;
 `
 const BtnWrap1 = styled.div`
 display: flex;
@@ -363,12 +367,13 @@ const Btn1 = styled.div`
 margin-right: 13px;
 height: 150px;
 background-color: #7000f6;
-width: 210px;
+
 border-radius: 20px;
 cursor: pointer;
 
 img {
   height: 30px;
+  margin-left: 130px;
   width: 30px;
   padding-top: 20px;
   padding-right: 10px;
@@ -386,7 +391,7 @@ span {
 const Btn4 = styled.div`
 height: 150px;
 background-color: #FFB947;
-width: 210px;
+
 border-radius: 20px;
 cursor: pointer;
 
@@ -394,6 +399,7 @@ cursor: pointer;
 img {
   height: 30px;
   width: 30px;
+  margin-left: 130px;
   padding-top: 20px;
   padding-right: 10px;
   margin-bottom: 60px;
@@ -412,7 +418,7 @@ const Btn2 = styled.div`
 
 height: 150px;
 background-color: #15B1E1;
-width: 150px;
+
 border-radius: 20px;
 cursor: pointer;
 
@@ -420,6 +426,7 @@ img {
   height: 30px;
   width: 30px;
   padding-top: 20px;
+  margin-left: 100px;
   padding-right: 10px;
   margin-bottom: 60px;
 }
@@ -442,7 +449,7 @@ margin-bottom: 30px;
 const Btn3 = styled.div`
 height: 150px;
 background-color: #02C964;
-width: 150px;
+
 border-radius: 20px;
 margin-right: 13px;
 cursor: pointer;
@@ -450,6 +457,7 @@ cursor: pointer;
 img {
   height: 30px;
   width: 30px;
+  margin-left: 100px;
   padding-top: 20px;
   padding-right: 10px;
   margin-bottom: 60px;
@@ -471,4 +479,8 @@ font-weight: bold;
 const Img = styled.div`
 display: flex;
 justify-content: end;
+`
+const Wrap2 = styled.div`
+display: grid;
+justify-content: center;
 `

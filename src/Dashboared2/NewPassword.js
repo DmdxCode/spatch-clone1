@@ -82,8 +82,12 @@ function NewPassword() {
                 </List1>
 
                 <List2>
-                <li><button><LogoutIcon />  Logout</button></li>
-                <li><button><SupportAgentIcon/>  Contact</button></li>
+                  <Link to="/" style={{textDecoration: "none"}}>
+                    <li><button><LogoutIcon />  Logout</button></li>
+                  </Link>
+                  <Link to="/Contact" style={{textDecoration: "none"}}>
+                    <li><button><SupportAgentIcon/>  Contact</button></li>
+                  </Link>
                 </List2>
                 <footer>spatch<img src="pop,logo.jpg" alt="logo"/></footer>
                 
@@ -115,7 +119,6 @@ function NewPassword() {
                     </SubmitBtn>
                   </Link>
               </MasterBox>
-              <BottomAddIcon><img src="add icon img-modified (1).png" alt="icon"/></BottomAddIcon>
             </Content> 
 
         </Container>
@@ -440,32 +443,4 @@ submit{
   height: 60px;
 }
 `
-const BottomAddIcon = styled.div`
-  padding-top: 50px;
-  display: flex;
-  justify-content: end;
-  padding-right: 10px; 
-  margin-bottom: 35px;
-
-  img{   
-  height: 50% ;
-  width: 15%;
   
-  }
-
-margin-top: 0px;
-img{
-  
-  
-  -moz-box-shadow: 0px 5px 5px #fff;
-  -webkit-box-shadow: 0px 5px 5px #fff;
-  box-shadow: 0px 10px 35px #7000f6;
-  -moz-border-radius:50px;
-  -webkit-border-radius:190px;
-  cursor: pointer;
-  height: 40px;
-  width: 40px;
-
-
-}
-`

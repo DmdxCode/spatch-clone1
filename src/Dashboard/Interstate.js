@@ -19,6 +19,7 @@ import SmsIcon from '@mui/icons-material/Sms';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
 import CurrencyInput from 'react-currency-input-field';
+import { ExpandLess } from '@mui/icons-material';
 
 function Interstate() {
     const [burgerStatus, setburgerStatus] = useState(false);
@@ -170,7 +171,7 @@ const toggleHandle5 = () => {
                   <Link to="/" style={{textDecoration: "none"}}>
                     <li><button><LogoutIcon />  Logout</button></li>
                   </Link>                
-                  <Link to="/Help" style={{textDecoration: "none"}}>
+                  <Link to="/Contact" style={{textDecoration: "none"}}>
                     <li><button><SupportAgentIcon/>  Contact</button></li>
                   </Link>                
                 </List2>
@@ -202,7 +203,7 @@ const toggleHandle5 = () => {
                 </button>
               </span>
               {cancle1?
-                 <CloseIcon onClick={toggleHandle}/>
+                 <CloseIcon onClick={toggleHandle} style={{cursor: "pointer"}}/>
                  : ""
                 }            
             </Box1>
@@ -214,7 +215,7 @@ const toggleHandle5 = () => {
                   </button>
                 </H7>
                 {cancle2?
-                 <CloseIcon onClick={toggleHandle2}/>
+                 <CloseIcon onClick={toggleHandle2} style={{cursor: "pointer"}}/>
                  : <GpsNotFixedOutlinedIcon onClick={toggleHandle2}/>
                 }
               </span>
@@ -225,7 +226,7 @@ const toggleHandle5 = () => {
                   </button>
                 </H8>
                 {cancle3?
-                 <CloseIcon onClick={toggleHandle3}/>
+                 <CloseIcon onClick={toggleHandle3} style={{cursor: "pointer"}}/>
                  : ""
                 }
               </span>
@@ -236,7 +237,7 @@ const toggleHandle5 = () => {
                   </button>
                 </H9>
                 {cancle4?
-                 <CloseIcon onClick={toggleHandle4}/>
+                 <CloseIcon onClick={toggleHandle4} style={{cursor: "pointer"}}/>
                  : ""
                 }              </span>
               <span>
@@ -246,7 +247,7 @@ const toggleHandle5 = () => {
                   </button>
                 </H10>
                 {cancle5?
-                 <CloseIcon onClick={toggleHandle5}/>
+                 <CloseIcon onClick={toggleHandle5} style={{cursor: "pointer"}}/>
                  : ""
                 }              
               </span>
@@ -254,7 +255,15 @@ const toggleHandle5 = () => {
             <Box3>
               <DropDownContainer1>
                 <><DropDownHeader1 onClick={toggling}>
-                  <li><Icon1><MopedIcon/><span  style={{fontWeight: "500", color: "black"}}>{ selectedOption || "Select Vehicle Category"}</span></Icon1><Icon4><ExpandMoreIcon/></Icon4></li>
+                  <li><Icon1><MopedIcon/><span  style={{fontWeight: "500", color: "black"}}>{ selectedOption || "Select Vehicle Category"}</span></Icon1>
+                  <Icon4>
+                    {isOpen? 
+                    <ExpandLess onClick={toggling}/> 
+                    :
+                    <ExpandMoreIcon onClick={toggling} />
+                   }
+                  </Icon4>
+                  </li>
 
                 </DropDownHeader1></>
                 { isOpen && (
@@ -295,7 +304,11 @@ const toggleHandle5 = () => {
                       <span style={{width: "180px", textOverflow : "ellipsis", overflow: "hidden", display: "inline-block", whiteSpace: "nowrap", color: "black"}}>{inputValue || "Leave a note" }</span>
                     </Icon2>
                     <Icon6>
+                    {isOpen2? 
+                      <ExpandLess onClick={toggling2}/> 
+                      :
                       <ExpandMoreIcon onClick={toggling2} />
+                    }
                     </Icon6>
                   </li> 
                   
@@ -315,7 +328,11 @@ const toggleHandle5 = () => {
                   <span> Receive cash for me <button style={{color: "#7000f6"}} >{amount}</button></span>
                 </Icon3>
                 <Icon5>
-                  <ExpandMoreIcon onClick={toggling3}/>
+                {isOpen3? 
+                  <ExpandLess onClick={toggling3}/> 
+                  :
+                  <ExpandMoreIcon onClick={toggling3} />
+                }
                 </Icon5>
               </li>
               {isOpen3 && (
@@ -662,6 +679,7 @@ color: #7000f6;
 height: 40px;
 width: 250px; 
 margin: 5px;
+cursor: pointer;
 border-radius: 7px;
 background-color: white;
 border: 1px solid #7000f6;

@@ -78,7 +78,7 @@ function History2() {
                   <Link to="/" style={{textDecoration: "none"}}>
                     <li><button><LogoutIcon />  Logout</button></li>
                   </Link>
-                  <Link to="/Help" style={{textDecoration: "none"}}>
+                  <Link to="/Contact" style={{textDecoration: "none"}}>
                     <li><button><SupportAgentIcon/>  Contact</button></li>
                   </Link>
                 </List2>

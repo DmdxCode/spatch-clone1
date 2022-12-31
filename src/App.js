@@ -35,6 +35,7 @@ import Interstate from './Dashboard/Interstate'
 import InterstateGuest from './Dashboard/InterstateGuest';
 import Addcard from './Dashboared2/Addcard';
 import International from './Dashboard/International';
+import Contact from './Dashboared2/Contact';
 
 import {
   BrowserRouter as Router,
@@ -81,6 +82,7 @@ function App() {
           <Route exact path="/History2" element= { <History2/> } />
           <Route exact path="/AfterFilling" element= { <AfterFilling/> } />
           <Route exact path="/NewPassword" element= { <NewPassword/> } />
+          <Route exact path="/Contact" element= { <Contact/> } />
           <Route exact path="/Help" element= { <Help/> } />
           <Route exact path="/MyPackageWasNotDelivered" element= { <MyPackageWasNotDelivered/> } />
           <Route exact path="/DeleteAccount" element= { <DeleteAccount/> } /> 
