@@ -237,7 +237,7 @@ const toggleHandle5 = () => {
               <span>
                 <H9><img src="icon (7).png" alt="icon"/>
                   <button>
-                    <input value={cancle4} onChange={toggleCancle4} type="number" id="number" placeholder="+234 | 809 000 4030" input require="+234" />
+                    <input value={cancle4} onChange={toggleCancle4} type="number" id="number" placeholder="+234 | 809 000 4030" input require="+234" style={{fontWeight: "bold", fontSize: "15px"}}/>
                   </button>
                 </H9>
                 {cancle4?
