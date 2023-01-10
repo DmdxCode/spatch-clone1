@@ -172,22 +172,6 @@ function History() {
             
             
               
-              {/* <RecieptHistory>
-                <Tr1>
-                  <span><tr>20 August 2021, 12:32pm</tr><tr>Surulere,Lagos</tr></span>
-                  <span><td>NGN 0.00 <button>Canceled</button></td><CardSpan>Card 4399<span><PanoramaFishEyeIcon fontSize="small"/></span></CardSpan></span>
-                </Tr1>
-
-                <Tr3>
-                  <span><tr>20 August 2021, 12:32pm</tr><tr>Surulere,Lagos</tr></span>
-                  <span><td>NGN 2,800.00</td><CardSpan>Card 4399<span><PanoramaFishEyeIcon fontSize="small"/></span></CardSpan></span>
-                </Tr3>
-
-              <Tr1>
-                <span><tr>20 August 2021, 12:32pm</tr><tr>Surulere,Lagos</tr></span>
-                <span><td>NGN 2,800.00</td><CardSpan>Card 4399<span><PanoramaFishEyeIcon fontSize="small"/></span></CardSpan></span>
-              </Tr1>
-              </RecieptHistory> */}
             </Content> 
         </Container>
         
@@ -561,11 +545,6 @@ width: 180px;
 margin-bottom: 10px;
 border-bottom: 1px solid #6E6E6E;
 `
-const Tr3 = styled(Tr1)`
-background-color:  #F4F4F6;
-padding-left: 10px;
-padding-right: 10px;
-`
 const CardSpan = styled.div`
 display: flex;
 
@@ -600,6 +579,4 @@ label{
   font-weight: 500;
   color: #7000f6;
 }
-`
-const RecieptHistory = styled.div`
 `
