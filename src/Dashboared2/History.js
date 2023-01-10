@@ -14,10 +14,22 @@ import WestIcon from '@mui/icons-material/West';
 import PanoramaFishEyeIcon from '@mui/icons-material/PanoramaFishEye';
 import TrendingFlatIcon from '@mui/icons-material/TrendingFlat';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
-//import Record from '../Dashboard/Record.json';
+import Record from '../Dashboard/Record.json';
 
 function History() {
-    const [burgerStatus, setburgerStatus] = useState(false);
+
+  const [burgerStatus, setburgerStatus] = useState(false);
+  const [selected, setSelected] = useState(-1);
+  const [isOpen, setIsOpen] = useState(null);
+  const toggling = (id) => {
+    setSelected(id)
+    setIsOpen(!isOpen)
+    console.log(id)
+  };
+  
+  
+
+    
   return (
     <>
     <TopIconWrap>
@@ -50,7 +62,7 @@ function History() {
                 <WalletBalance>N12,000</WalletBalance>
                 <Button1>
                   <PlusIcon><img src="wallet add icon-modified.png" alt="add icon"/></PlusIcon>
-                  </Button1>
+                </Button1>
 
                 
               </Wrap>
@@ -89,26 +101,78 @@ function History() {
             <Link to="/Dashboard2" style={{textDecoration: "none"}}>
               <TopArrow><WestIcon/><span>History</span></TopArrow>
             </Link>
-              <BtnTopText><h3>These are your order history<br/><h6>Confirm your current password</h6></h3> </BtnTopText>
+              <BtnTopText><h3>These are your order history<br/></h3> <h6>Confirm your current password</h6></BtnTopText>
             
-              <Table>
-                <Tr1><span><tr>20 August 2021, 12:32pm</tr><tr>Surulere,Lagos</tr></span>
-                <span><td>NGN 2,800.00</td><CardSpan>Card 4399<span><PanoramaFishEyeIcon fontSize="small"/></span></CardSpan></span></Tr1>
-                <Flex>
-                <Grid1>
-                <span><img src="yellow icon (1) up.png" alt="icon"/><button>Picked From</button></span>
-                <Tr2><td>Fisayo Ahmed</td><h8>Yar'Adua Penthous...</h8></Tr2>             
-                <span><img src="icon (5) down.png" alt="icon"/><b>Delivered To</b></span>
-                <Tr><td>Uche Osifejo</td><h8>Yar'Adua Penthous...</h8></Tr>
-                </Grid1>
-                <CardSpan><img src="Spachbike3.jpg" alt="icon"/></CardSpan>
-                </Flex>
-                <Link to="/History2" style={{textDecoration: "none"}}>
-                  <Reciept><label>View reciept detail<TrendingFlatIcon fontSize="small" style={{marginTop: "3px", marginLeft: "2px"}}/></label><RemoveCircleOutlineIcon fontSize="small" style={{color: " #6E6E6E"}}/></Reciept>
-                </Link>
-              </Table>
+            {Record.job.map((item,index)=>{ 
+              return( 
+              <Table key={index} value={item.id} onClick={()=>toggling(item.id)} >
+                
+                  <Tr1>
+                    <>
+                      <tr>{item.date}, {item.time}</tr>
+                      <tr
+                      style={{
+                        width: "180px",
+                        textOverflow : "ellipsis",
+                        overflow: "hidden",
+                        display: "inline-block",
+                        whiteSpace: "nowrap",
+                        border: "none",
+                        WebkitAppearance: "none",
+                        outline: "none",
+                        decoration: "none"}}
+                      >{item.pickup_address}</tr>
+                    </>
+                    <span style={{marginBottom: "5px"}}>
+                      <td>NGN {item.price}</td><CardSpan>Card {item.job_id}
+                      <span><PanoramaFishEyeIcon fontSize="small"/></span></CardSpan>
+                    </span>
+                  </Tr1>
+                  {selected === item.id && (
+                     
+                    <>
+                    
+                    <Flex  value={item.id} style={{borderTop: "1px solid #6e6e6e"}}>
+                    <Grid1>
+                    <span><img src="yellow icon (1) up.png" alt="icon"/><button>Picked From</button></span>
+                    <Tr2>
+                      <>
+                      <td>{item.sender_name}</td>
+                      <tr style={{
+                        width: "180px",
+                        textOverflow : "ellipsis",
+                        overflow: "hidden",
+                        display: "inline-block",
+                        whiteSpace: "nowrap",
+                        border: "none",
+                        WebkitAppearance: "none",
+                        outline: "none",
+                        decoration: "none"}}>
+                          {item.sender.sender_address}</tr>
+                      </>
+                    </Tr2>
+                                
+                    <span><img src="icon (5) down.png" alt="icon"/><b>Delivered To</b></span>
+                    <Tr>
+                      <td>{item.reciever_name}</td>
+                      <tr style={{paddingBottom: "10px"}}>{item.reciever.reciever_address}</tr>
+                    </Tr>
+                    </Grid1>
+                    <CardSpan><img src="Spachbike3.jpg" alt="icon"/></CardSpan>
+                    </Flex>
+                    <Link to="/History2" style={{textDecoration: "none"}}>
+                      <Reciept><label>View reciept detail<TrendingFlatIcon fontSize="small" style={{marginTop: "3px", marginLeft: "2px"}}/></label><RemoveCircleOutlineIcon fontSize="small" style={{color: " #6E6E6E"}}/></Reciept>
+                    </Link>
+                    </>
+                  )}
+                
+              </Table>)
               
-              <RecieptHistory>
+            })}
+            
+            
+              
+              {/* <RecieptHistory>
                 <Tr1>
                   <span><tr>20 August 2021, 12:32pm</tr><tr>Surulere,Lagos</tr></span>
                   <span><td>NGN 0.00 <button>Canceled</button></td><CardSpan>Card 4399<span><PanoramaFishEyeIcon fontSize="small"/></span></CardSpan></span>
@@ -123,7 +187,7 @@ function History() {
                 <span><tr>20 August 2021, 12:32pm</tr><tr>Surulere,Lagos</tr></span>
                 <span><td>NGN 2,800.00</td><CardSpan>Card 4399<span><PanoramaFishEyeIcon fontSize="small"/></span></CardSpan></span>
               </Tr1>
-              </RecieptHistory>
+              </RecieptHistory> */}
             </Content> 
         </Container>
         
@@ -133,6 +197,7 @@ function History() {
 }
 
 export default History
+
 
 const Container = styled.div`
 @media (min-width: 700px) {
@@ -180,18 +245,18 @@ background-color: white;
 `
 const BurgerNav = styled.div`
 position: fixed;
-z-index: 10;
+z-index: 1;
 background: #f2f2f2;
 list-style: none;
 text-align: start;
-height: 100vh;
-opacity: 1;
+
+opacity: 2;
 width: 230px;
-top: 0;
+overflow: hidden;
 bottom: 0;
+top: 0;
 left: 0;
 right: 0;
-overlay: 100%;
 transform: ${props => props.show? 'translateY(0)': 'translateY(100%)'};
 
 @media(max-width: 100px) {
@@ -224,7 +289,6 @@ const Text1 = styled.div`
 color: white;
 font-weight: bold;
 padding-top: 3px;
-
 `
 const Text2 = styled.div`
 color: white;
@@ -275,7 +339,7 @@ const Button1 = styled.div`
 
 const Container3 = styled.div`
 padding-left: 20px;
-padding-right: 50px;
+padding-right: 20px;
 
 `
 const List1 = styled.div`
@@ -284,8 +348,8 @@ font-weight: bold;
 padding-bottom: 20px;
 
 li {
-padding-top: 25px; 
- 
+padding-top: 15px; 
+
 }
 
 button {
@@ -294,11 +358,6 @@ button {
   font-weight: bold;
   text-decoration: none; 
   color: #6E6E6E;
-}
-
-span {
-  color: #7000f6;
-  padding-top: 15px;
 }
 
 `
@@ -314,9 +373,7 @@ justify-content: start;
 span{
   font-size: 30px;
   font-weight: bold;
-  padding-top: 15px;
-  padding-left: 15px;
-  bottom: 20px;
+  padding-left: 5px;
   color: #7000F6;
   text-shadow: 0 0 8px #6001D1, 0 0 8px #6001D1;
 }
@@ -325,21 +382,20 @@ button {
   border: none;
   background-color: #f2f2f2;
   font-weight: bold;
-  margin-left: 15px;
+  
 }
 
 `
 const List2 = styled.div`
-padding-top: 25px;
+padding-top: 15px;
 font-weight: bold;
 border-bottom: 1px solid #6E6E6E;
 li {
-   padding-top: 15px; 
-   border: none;
-   background-color: #f2f2f2;
-   font-weight: bold;
+   padding-top: 10px; 
+   
    border-top: 1px solid #6E6E6E;
    padding-bottom: 15px;
+
    button {
     border: none;
     background-color: #f2f2f2;
@@ -348,7 +404,7 @@ li {
     color: #6E6E6E;
     
   }
-}       
+}      
 `
 const CustomClose = styled(CloseIcon)`
 padding-top: 8px;
@@ -404,6 +460,7 @@ font-weight: bold;
 `
 const Table = styled.div`
 background-color: ;
+margin-bottom: 10px;
 border: 1px solid #6E6E6E;
 padding-left: 10px;
 padding-right: 10px;
@@ -416,7 +473,7 @@ span {
   font-weight: bold;
   color: #FFB947;
   font-size: 15px;
-  margin-left: 5px;
+
 
   
  }
@@ -444,9 +501,9 @@ img {
   width: 20px;
 }
 
-h8 {
+tr {
 
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 
 }
 
@@ -461,13 +518,13 @@ padding-top: 15px;
 const Tr = styled.div`
     display:grid;
     gap:4px;
-    font-size: 13px;
+
     top: 0;
     padding-left: 28px;
+   
 `
 
 const Tr1 = styled.div`
-border-bottom: 1px solid #6E6E6E;
 padding-top: 15px;
 padding-left: 10px;
 padding-right: 10px;
@@ -475,7 +532,7 @@ span {
  display: flex;
   justify-content: space-between; 
   
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 tr {
@@ -501,7 +558,6 @@ button {
 const Tr2 = styled.div`
 margin-left: 23px;
 width: 180px;
-padding-bottom: 10px;
 margin-bottom: 10px;
 border-bottom: 1px solid #6E6E6E;
 `
@@ -537,8 +593,8 @@ const Reciept = styled.div`
 display: flex;
 justify-content: space-between;
 border-top: 1px solid #6E6E6E;
-padding-top: 15px;
-padding-bottom: 15px;
+padding-top: 10px;
+padding-bottom: 10px;
 label{
   display: flex;
   font-weight: 500;

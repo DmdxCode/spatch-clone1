@@ -63,7 +63,7 @@ function Dashboard2() {
                 <Link to="/History" style={{textDecoration: "none", display: "flex"}}>
                  <li><button><Inventory2Icon/> History</button></li>
                 </Link>
-                <Link to="/History" style={{textDecoration: "none", display: "flex"}}>
+                <Link to="/AfterFilling" style={{textDecoration: "none", display: "flex"}}>
                   <li><button><AccountCircleTwoToneIcon /> Account</button></li>
                 </Link>
                 </List1>

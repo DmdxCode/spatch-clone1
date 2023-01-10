@@ -182,7 +182,7 @@ const toggleHandle5 = () => {
             <Content>
             <Arrow style={{display: "flex"}}>
               <Link to="/Dashboard2" style={{textDecoration: "none"}}>
-                <WestIcon/>
+                <WestIcon style={{color: "#7000f6"}}/>
               </Link>
             <span>Request</span>
             </Arrow>
